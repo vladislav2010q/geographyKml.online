@@ -1,0 +1,748 @@
+:root {
+    --bg: #050a14;
+    --bg2: #081120;
+    --text: #eaf2ff;
+    --muted: #8ea3c2;
+    --blue: #4f8cff;
+    --violet: #8b5cf6;
+    --teal: #2dd4bf;
+    --gold: #f59e0b;
+    --green: #10b981;
+    --glass: rgba(255, 255, 255, .05);
+    --border: rgba(255, 255, 255, .10);
+    --font-display: 'Unbounded', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+}
+
+/* ================= БАЗОВЫЕ СТИЛИ ================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+body {
+    background: radial-gradient(120% 90% at 70% -10%, #0d1b33 0%, var(--bg2) 42%, var(--bg) 100%);
+    color: var(--text);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+::selection {
+    background: var(--violet);
+    color: #fff;
+}
+/* ================= ФОН ================= */
+.bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+.aurora {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: .5;
+    mix-blend-mode: screen;
+    will-change: transform;
+}
+.aurora--1 {
+    width: 55vw;
+    height: 55vw;
+    left: -12vw;
+    top: -18vw;
+    background: radial-gradient(circle at 35% 35%, #274b8f, transparent 65%);
+    animation: drift1 22s ease-in-out infinite alternate;
+}
+.aurora--2 {
+    width: 48vw;
+    height: 48vw;
+    right: -14vw;
+    top: 8vh;
+    background: radial-gradient(circle at 60% 40%, #5b3aa8, transparent 65%);
+    animation: drift2 26s ease-in-out infinite alternate;
+}
+.aurora--3 {
+    width: 42vw;
+    height: 42vw;
+    left: 30vw;
+    bottom: -24vw;
+    background: radial-gradient(circle at 50% 50%, #0e6b5f, transparent 65%);
+    animation: drift1 30s ease-in-out infinite alternate-reverse;
+}
+@keyframes drift1 {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(6vw, 4vh) scale(1.12); }
+}
+@keyframes drift2 {
+    from { transform: translate(0, 0) scale(1.1); }
+    to { transform: translate(-5vw, 6vh) scale(.95); }
+}
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: .35;
+    background-image: 
+        linear-gradient(rgba(120, 160, 255, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(120, 160, 255, .05) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse at 50% 40%, #000 30%, transparent 75%);
+}
+.noise {
+    position: absolute;
+    inset: 0;
+    opacity: .06;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+/* ================= СЦЕНА ================= */
+.scene {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(40px, 6vh, 80px);
+    padding: clamp(16px, 2.6vw, 36px) clamp(20px, 4.5vw, 64px);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+/* ================= ЗАГОЛОВОК ================= */
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px, 1.6vh, 20px);
+    padding-top: clamp(8px, 2vh, 24px);
+}
+.hero__head {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.02;
+    background: linear-gradient(120deg, #fff 20%, #9db9ff 55%, #6ee7d8 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: titleIn 1.2s cubic-bezier(.2, .7, .2, 1);
+}
+@keyframes titleIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+}
+.hint {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--muted);
+    font-size: .95rem;
+    letter-spacing: .04em;
+}
+.hint__pulse {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex: none;
+    box-shadow: 0 0 0 0 rgba(45, 212, 191, .6);
+    animation: hintPulse 2s infinite;
+}
+@keyframes hintPulse {
+    to {
+        box-shadow: 0 0 0 12px rgba(45, 212, 191, 0);
+    }
+}
+/* ================= СЕКЦИИ ================= */
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.section__title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    background: linear-gradient(90deg, var(--blue), var(--violet), var(--teal));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    padding-left: 20px;
+}
+.section__title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 70%;
+    background: linear-gradient(180deg, var(--blue), var(--violet));
+    border-radius: 2px;
+}
+/* ================= СТИХОТВОРЕНИЕ ================= */
+.poem {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: clamp(24px, 4vw, 48px);
+    position: relative;
+    overflow: hidden;
+}
+.poem::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 120px;
+    font-family: Georgia, serif;
+    color: var(--blue);
+    opacity: .2;
+    line-height: 1;
+}
+.poem__text {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    line-height: 1.8;
+    font-style: italic;
+    color: var(--text);
+    position: relative;
+    z-index: 1;
+}
+.poem__author {
+    display: block;
+    margin-top: 20px;
+    font-size: .95rem;
+    color: var(--muted);
+    font-style: normal;
+    text-align: right;
+}
+/* ================= КОНТЕНТ БЛОК ================= */
+.content-block {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: clamp(20px, 3vw, 32px);
+}
+.content-block p {
+    font-size: clamp(.95rem, 1.5vw, 1.1rem);
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 16px;
+}
+.content-block p:last-child {
+    margin-bottom: 0;
+}
+.intro-text {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: clamp(20px, 3vw, 32px);
+    margin-bottom: 32px;
+}
+.intro-text p {
+    font-size: clamp(.95rem, 1.5vw, 1.1rem);
+    line-height: 1.7;
+    color: var(--text);
+}
+/* ================= СЕТКА НАРОДОВ С ИЗОБРАЖЕНИЯМИ ================= */
+.peoples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+.people-card {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 0;
+    text-align: center;
+    transition: all .4s cubic-bezier(.2, .7, .2, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.people-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(79, 140, 255, .15), rgba(139, 92, 246, .15));
+    opacity: 0;
+    transition: opacity .4s;
+    z-index: 1;
+}
+.people-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: var(--blue);
+    box-shadow: 0 24px 48px rgba(79, 140, 255, .3);
+}
+.people-card:hover::before {
+    opacity: 1;
+}
+.people-card__image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.people-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s;
+}
+.people-card:hover .people-card__image img {
+    transform: scale(1.1);
+}
+.people-card__icon {
+    font-size: 2rem;
+    color: var(--gold);
+    margin: 20px 0 12px;
+    position: relative;
+    z-index: 2;
+}
+.people-card__name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--text);
+    position: relative;
+    z-index: 2;
+    margin-bottom: 8px;
+}
+.people-card__desc {
+    font-size: .9rem;
+    color: var(--muted);
+    padding: 0 16px 24px;
+    position: relative;
+    z-index: 2;
+}
+/* ================= ДЕТАЛЬНАЯ ИНФОРМАЦИЯ О НАРОДЕ ================= */
+.people-detail {
+    background: var(--glass);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: clamp(24px, 4vw, 40px);
+    display: none;
+    position: relative;
+    overflow: hidden;
+}
+.people-detail.active {
+    display: block;
+    animation: detailSlideIn .6s cubic-bezier(.2, .7, .2, 1);
+}
+@keyframes detailSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+.people-detail__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+.people-detail__title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    background: linear-gradient(90deg, var(--blue), var(--violet), var(--teal));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.people-detail__close {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    line-height: 1;
+}
+.people-detail__close:hover {
+    background: rgba(255, 100, 100, .2);
+    border-color: #ff6464;
+    transform: rotate(90deg);
+}
+.people-detail__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+.people-detail__gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.gallery-main {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+.gallery-thumbs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.gallery-thumbs img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: all .3s;
+}
+.gallery-thumbs img:hover {
+    transform: scale(1.05);
+    border-color: var(--blue);
+}
+.people-detail__text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 16px;
+}
+.people-detail__text p:last-child {
+    margin-bottom: 0;
+}
+/* ================= ГЕОГРАФИЯ С ИЗОБРАЖЕНИЕМ ================= */
+.geography-block {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 32px;
+    align-items: center;
+}
+.geography-image {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+.geography-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform .5s;
+}
+.geography-image:hover img {
+    transform: scale(1.05);
+}
+.geography-text p {
+    font-size: clamp(.95rem, 1.5vw, 1.1rem);
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 16px;
+}
+.geography-text p:last-child {
+    margin-bottom: 0;
+}
+/* ================= ГАЛЕРЕЯ КОСТЮМОВ ================= */
+.costume-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.costume-gallery__item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--glass);
+    backdrop-filter: blur(8px);
+    transition: all .4s;
+}
+.costume-gallery__item:hover {
+    transform: translateY(-8px);
+    border-color: var(--violet);
+    box-shadow: 0 16px 32px rgba(139, 92, 246, .25);
+}
+.costume-gallery__item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s;
+}
+.costume-gallery__item:hover img {
+    transform: scale(1.08);
+}
+.costume-gallery__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 20px;
+    background: linear-gradient(transparent, rgba(5, 10, 20, .95));
+    font-size: .95rem;
+    color: var(--text);
+    font-weight: 500;
+}
+/* ================= СЕТКА КОСТЮМОВ ================= */
+.costumes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+.costume-item {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    transition: all .4s cubic-bezier(.2, .7, .2, 1);
+    position: relative;
+    overflow: hidden;
+}
+.costume-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--violet), var(--teal));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+.costume-item:hover {
+    transform: translateY(-6px);
+    border-color: var(--violet);
+    box-shadow: 0 16px 32px rgba(139, 92, 246, .2);
+}
+.costume-item:hover::before {
+    transform: scaleX(1);
+}
+.costume-item__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+.costume-item__number {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--blue), var(--teal));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+}
+.costume-item__title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--text);
+}
+.costume-item__text {
+    font-size: .95rem;
+    line-height: 1.7;
+    color: var(--muted);
+}
+/* ================= СЕТКА ВИДЕО ================= */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.video-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all .4s cubic-bezier(.2, .7, .2, 1);
+    position: relative;
+    overflow: hidden;
+}
+.video-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(79, 140, 255, .08), rgba(45, 212, 191, .08));
+    opacity: 0;
+    transition: opacity .4s;
+}
+.video-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: var(--teal);
+    box-shadow: 0 16px 32px rgba(45, 212, 191, .2);
+}
+.video-card:hover::before {
+    opacity: 1;
+}
+.video-card__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--violet));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 8px 16px rgba(79, 140, 255, .3);
+}
+.video-card__content {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+.video-card__title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+.video-card__link {
+    font-size: .85rem;
+    color: var(--teal);
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+/* ================= АНИМАЦИЯ ПОЯВЛЕНИЯ ================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(8px);
+}
+.reveal.shown {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: opacity 1s cubic-bezier(.2, .7, .2, 1), 
+                transform 1s cubic-bezier(.2, .7, .2, 1), 
+                filter 1s;
+}
+/* ================= АДАПТИВНОСТЬ ================= */
+@media (max-width: 1024px) {
+    .people-detail__content {
+        grid-template-columns: 1fr;
+    }
+    .geography-block {
+    grid-template-columns: 1fr;
+}
+
+.geography-image {
+    order: -1;
+}}
+@media (max-width: 768px) {
+    .scene {
+        gap: 32px;
+    }
+    .peoples-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.people-card__image {
+    height: 160px;
+}
+
+.costumes-grid {
+    grid-template-columns: 1fr;
+}
+
+.videos-grid {
+    grid-template-columns: 1fr;
+}
+
+.video-card {
+    flex-direction: column;
+    text-align: center;
+}
+
+.costume-gallery {
+    grid-template-columns: 1fr;
+}
+}
+@media (max-width: 480px) {
+    .peoples-grid {
+        grid-template-columns: 1fr;
+    }.people-detail__gallery {
+    order: -1;
+}
+
+/* ================= УЛУЧШЕНИЯ ДЛЯ REDUCED MOTION ================= */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        }
+    }
+}
+/* ================= ЗАГЛУШКИ ДЛЯ ФОТОГРАФИЙ ================= */
+.gallery-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: .85rem;
+    line-height: 1.5;
+    letter-spacing: .04em;
+    color: var(--muted);
+    background: linear-gradient(135deg, rgba(79, 140, 255, .10), rgba(139, 92, 246, .10));
+    border: 1px dashed var(--border);
+    border-radius: 16px;
+}
+.costume-gallery__item .gallery-placeholder {
+    height: 280px;
+    border-radius: 0;
+}
+.people-card__image .gallery-placeholder {
+    min-height: 200px;
+    border-radius: 0;
+}
+.geography-image .gallery-placeholder {
+    min-height: 320px;
+}

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Народы Поволжья</title>
+    <link rel="stylesheet" href="povoljy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Unbounded:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Фоновые эффекты -->
+    <div class="bg">
+        <div class="aurora aurora--1"></div>
+        <div class="aurora aurora--2"></div>
+        <div class="aurora aurora--3"></div>
+        <div class="grid-overlay"></div>
+        <div class="noise"></div>
+    </div>
+    <!-- Основной контент -->
+<div class="scene">
+    <!-- Заголовок -->
+    <header class="hero">
+        <div class="hero__head">
+            <h1 class="title">
+                <span class="title__row">Народы Поволжья</span>
+            </h1>
+            <div class="hint">
+                <div class="hint__pulse"></div>
+                <span>Татары, удмурты</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Список народов с изображениями -->
+    <section class="section reveal" id="peoples">
+        <h2 class="section__title">Народы</h2>
+        <div class="peoples-grid">
+            <div class="people-card" data-target="tatars">
+                <div class="people-card__image">
+                    <img src="https://rost.media/image/public/8989ed193b5284bcfad1874bd40da28b.jpg" alt="Татары">
+                </div>
+                <div class="people-card__icon">✦</div>
+                <h3 class="people-card__name">Татары</h3>
+                <p class="people-card__desc">Тюркский народ Поволжья</p>
+            </div>
+            <div class="people-card" data-target="udmurts">
+                <div class="people-card__image">
+                    <img src="https://nasledie.digital/wp-content/uploads/2023/03/almode.ru_.jpg" alt="Удмурты">
+                </div>
+                <div class="people-card__icon">✦</div>
+                <h3 class="people-card__name">Удмурты</h3>
+                <p class="people-card__desc">Финно-угорский народ</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Детальная информация о татарах -->
+    <section class="people-detail reveal" id="tatars-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Татары</h2>
+            <button class="people-detail__close" onclick="closeDetail('tatars-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+                        <div class="costume-gallery" style="grid-template-columns:repeat(3,1fr);">
+                <div class="costume-gallery__item">
+                    <img src="https://stcdn.business-online.ru/photos/675712/324647.jpg" alt="Татарский костюм">
+                </div>
+                <div class="costume-gallery__item">
+                    <img src="https://1portal.ru/sites/default/files/1_20.jpg" alt="Татарстан">
+                </div>
+                <div class="costume-gallery__item">
+                    <img src="https://avatars.mds.yandex.net/i?id=27eeac53d77f268e3896d98ea55318b5_l-4885246-images-thumbs&n=13" alt="Казань">
+                </div>
+            </div>
+            <div class="people-detail__text">
+                <p>Татары — тюркский народ, второй по численности в России. Проживают преимущественно в Республике Татарстан и соседних регионах. В их культуре объединены традиции нескольких народов: волжских булгар, построивших здесь государство в X веке, среднеазиатских тюрков, принёсших ислам, и многонационального наследия Золотой Орды. Традиционные занятия — земледелие, скотоводство, торговля и ремёсла.</p>
+                <p>Татарский костюм отличается туникообразным покроем рубах, богатыми орнаментами с растительными и геометрическими мотивами. Женский костюм включает платье, камзол и головной убор калфак — бархатную шапочку со свисающей лентой, украшенной жемчугом и монетами. Характерны яркие цвета: красный, зелёный, синий.</p>
+                <p><strong>Сабантуй</strong> — праздник плуга. Один из самых известных праздников тюркских народов Поволжья, знаменующий окончание весенних полевых работ. Первое упоминание Сабантуя относится к 921 году. На майдане — специально выбранной поляне — устраивались состязания: национальная борьба куреш (двое борцов цепляются поясами и стремятся положить противника на лопатки), скачки, бег с яйцом в ложке, лазание на столб. Победитель борьбы — абсолютный батыр — получал в награду живого барана и с ним на плечах совершал круг почёта. Праздник сопровождался угощением: чак-чаком, эчпочмаком, кыстыбыем.</p>
+                <p><strong>Никах</strong> — мусульманский обряд бракосочетания. Свадебный ритуал у татар проходил в несколько этапов: сначала сватовство и сговор родителей, затем выплата калыма. В день свадьбы мулла читал никах — мусульманскую молитву, скрепляющую брак, — и спрашивал согласия отцов, а не самих молодых. Гостей угощали традиционным свадебным бульоном (туй аши) и сладостями. После торжества молодая жена оставалась у родителей, пока жених не выплачивал оставшуюся часть калыма.</p>
+                <p><strong>Нардуган</strong> — праздник зимнего солнцестояния. Древний доисламский праздник, сохранившийся у татар-кряшен и в некоторых сёлах. Отмечался в период с 25 декабря по 7 января. Молодёжь наряжалась в костюмы животных и духов, обходила дома с песнями — хозяева давали угощение. Вечерами девушки гадали на судьбу: бросали в прорубь венки, вытаскивали из шапки предметы, слушали звуки из-за ворот чужого дома.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Детальная информация об удмуртах -->
+    <section class="people-detail reveal" id="udmurts-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Удмурты</h2>
+            <button class="people-detail__close" onclick="closeDetail('udmurts-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+                        <div class="costume-gallery" style="grid-template-columns:repeat(3,1fr);">
+                <div class="costume-gallery__item">
+                    <img src="https://avatars.mds.yandex.net/i?id=9b0293abe81b0cf473142034cba7e069_l-5967468-images-thumbs&n=13" alt="Удмуртский костюм">
+                </div>
+                <div class="costume-gallery__item">
+                    <img src="https://avatars.mds.yandex.net/i?id=0e75a2cd25bcebcc89d411468d719a94_l-5300097-images-thumbs&n=13" alt="Удмуртия природа">
+                </div>
+                <div class="costume-gallery__item">
+                    <img src="https://cdn.национальныепроекты.рф/upload/webp/64e/wn2pxber5vk3n6l39kl50xlk93wh6kkg.webp" alt="Удмуртские орнаменты">
+                </div>
+            </div>
+            <div class="people-detail__text">
+                <p>Удмурты — финно-угорский народ, проживающий в Удмуртской Республике и соседних регионах. Традиционно занимались земледелием, охотой, бортничеством. Удмурты — один из немногих народов Европы, сохранивших живую языческую традицию: моления проводятся в священных местах (куала — родовые молельни), а жрецы-вöсясь до сих пор читают древние заклинания-куриськон.</p>
+                <p>Удмуртский костюм характеризуется белым цветом основы и красной вышивкой с геометрическими узорами. Женский костюм включает рубаху-шортдэрем, передник, пояс и головной убор. Особое значение имеют серебряные украшения — нагрудники, монисто и застёжки, которые передавались по наследству и считались оберегами.</p>
+                <p><strong>Гырон быдтон</strong> — праздник окончания пахоты. Один из главных летних праздников удмуртов, проводится в период цветения лугов, перед сенокосом. По поверьям, с 1 июня бог Вось улетает из молельни на луга, поэтому молиться нужно на природе, а рвать цветы и травы — запрещено. Праздник начинается с общественного моления и жертвоприношения, после чего устраивается торжественная трапеза: на кострах варится ритуальная каша, гостям разносят национальный напиток кумышку. По обычаю, на праздник приглашали родственников из других деревень, а те в ответ звали к себе.</p>
+                <p><strong>Акашка</strong> — обряд начала пахоты. Весенний ритуал, предваряющий сев. За неделю до праздника удмурты убирали и украшали дома, выпекали обрядовый хлеб и варили пиво (сур). В день праздника старейший мужчина деревни выходил на поле и символически проводил первую борозду, читая молитву-куриськон с просьбой о богатом урожае. Затем дети катались по полю, чтобы «прогреть» землю, а женщины обходили межи с хлебом и солью — задабривали духов поля.</p>
+                <p><strong>Вöй</strong> — удмуртская Масленица. Праздник проводов зимы у удмуртов, аналог русской Масленицы. Молодые парни на рассвете обходили дома и поднимали засонь прямо с постелями — выносили на снег незамужних девушек и шутников-стариков. Гостей принимали несколько дней подряд: водили по родственникам, угощали, пели масленичный напев Вöй кюй под гармошку. На третий день всей деревней провожали гостей до полевых ворот с песнями.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Стихотворение -->
+    <section class="section reveal">
+        <blockquote class="poem">
+            <div class="poem__text">
+                Мой Татарстан, ты — мой родник.<br>
+                Татарский — мой родной язык.<br>
+                И русский — мой язык родной.<br>
+                Горжусь я миром и страной.<br><br>
+                Мой Татарстан — России часть.<br>
+                Здесь не дадут друзьям пропасть.<br>
+                Здесь не дадут врагам пройти.<br>
+                В Казани сходятся пути.
+            </div>
+            <cite class="poem__author">— О. Журавлёва</cite>
+        </blockquote>
+    </section>
+
+    <!-- Географические особенности с изображением -->
+    <section class="section reveal">
+        <h2 class="section__title">Географические особенности</h2>
+        <div class="geography-block">
+            <div class="geography-image">
+                <img src="https://i.pinimg.com/originals/4b/81/2b/4b812b97e9ed32e05326445ee518b9a2.jpg" alt="Река Волга">
+            </div>
+            <div class="geography-text">
+                <p>Географические особенности Поволжья — это вытянутость вдоль Волги, разнообразный рельеф, смена природных зон с севера на юг, континентальный климат и богатые месторождения полезных ископаемых.</p>
+                <p>Всё это в совокупности определяет специфику хозяйства региона: от развития сельского хозяйства в лесостепной зоне до нефтедобычи на юге и работы крупных ГЭС на Волге. В Поволжье соседствуют леса, степи, реки — и у каждого народа сложился свой уклад, связанный с конкретным типом местности.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея традиционных костюмов -->
+    <section class="section reveal">
+        <h2 class="section__title">Галерея традиционных костюмов</h2>
+        <div class="costume-gallery">
+            <div class="costume-gallery__item">
+                <img src="https://i.pinimg.com/originals/ad/52/f0/ad52f0d2c45069a25c252aea717f6eff.jpg?nii=t" alt="Татарский костюм">
+                <div class="costume-gallery__caption">Татарский праздничный наряд</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://i.pinimg.com/474x/d1/a2/81/d1a281103b8640d6994fec8be201cc89.jpg" alt="Удмуртский убор">
+                <div class="costume-gallery__caption">Удмуртский головной убор</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://avatars.mds.yandex.net/i?id=33f84cb43f965ecfda7640d06010bb4f054e0f39-5887629-images-thumbs&n=13" alt="Традиционная вышивка">
+                <div class="costume-gallery__caption">Традиционная вышивка</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://avatars.mds.yandex.net/i?id=662c5c21c9bda90db3e1bb32aa66f07a_l-9866669-images-thumbs&n=13" alt="Народы Поволжья">
+                <div class="costume-gallery__caption">Народы Поволжья</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://sun9-49.vkuserphoto.ru/s/v1/ig1/3Y_jcOMPqTrUK11m-zB0pi3NStDmIAeepzzf1TA33T9a6nOipTXtz_Hl6g0DqK9__Buavg.jpg?quality=96&as=32x37,48x55,72x83,108x124,160x183,240x275,360x413,480x550,540x619,600x688&from=bu" alt="Волжские узоры">
+                <div class="costume-gallery__caption">Волжские орнаменты</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Традиционные костюмы -->
+    <section class="section reveal">
+        <h2 class="section__title">Традиционные костюмы</h2>
+        <div class="intro-text">
+            <p>Традиционные костюмы народов Поволжья — это сложные ансамбли, которые отражают историческое развитие, культурные связи и природно-климатические условия региона. Они имеют как общие черты, так и ярко выраженные локальные особенности.</p>
+        </div>
+        
+        <div class="costumes-grid">
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">01</div>
+                    <h3 class="costume-item__title">Многослойность</h3>
+                </div>
+                <p class="costume-item__text">Часто поверх рубахи надевали несколько слоёв одежды — передники, распашные элементы, верхнюю одежду. Это обеспечивало защиту от непогоды и подчёркивало социальный статус.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">02</div>
+                    <h3 class="costume-item__title">Богатая вышивка и отделка</h3>
+                </div>
+                <p class="costume-item__text">Вышивка была не только украшением, но и выполняла обережную функцию. В орнаментах часто использовались геометрические и растительные мотивы, а цветовая гамма (красный, зелёный, синий, белый) имела символическое значение.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">03</div>
+                    <h3 class="costume-item__title">Роль пояса</h3>
+                </div>
+                <p class="costume-item__text">Пояс был обязательным элементом костюма, часто богато украшался. Он не только выполнял практическую функцию, но и служил оберегом, а также указывал на социальный статус владельца.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">04</div>
+                    <h3 class="costume-item__title">Головные уборы</h3>
+                </div>
+                <p class="costume-item__text">Головные уборы строго соответствовали возрасту, семейному положению и назначению костюма. У каждого народа были свои уникальные формы: калфак у татар.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Творчество -->
+    <section class="section reveal">
+        <h2 class="section__title">Творчество народов Поволжья</h2>
+        <div class="content-block">
+            <p>В фольклоре и литературе народов Поволжья сильнее выражено почитание природы, охотничьи и лесные обряды. Сказки, эпосы и песни передавались устно из поколения в поколение, сохраняя историческую память и нравственные ценности народа.</p>
+            <p>У татар, чья жизнь была тесно связана со степью, в творчестве часто встречаются мотивы кочевого прошлого, юрты, скотоводческого быта и дружбы народов. Татарская поэма «Шүрәле» Габдуллы Тукая — классика мировой литературы о лесном духе-проказнике.</p>
+        </div>
+    </section>
+
+    <!-- Народные промыслы -->
+    <section class="section reveal">
+        <h2 class="section__title">Народные промыслы</h2>
+        <div class="intro-text">
+            <p>Народные промыслы Поволжья — уникальное культурное наследие, которое формировалось у разных народов региона: русских, татар, чувашей, мордвы и других. У каждого народа были свои традиции обработки дерева, металла, глины, а также особые виды вышивки и плетения.</p>
+        </div>
+        
+        <div class="costumes-grid">
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">01</div>
+                    <h3 class="costume-item__title">Обработка дерева</h3>
+                </div>
+                <p class="costume-item__text">Резьба по дереву была широко распространена у удмуртов. Мастера украшали предметы быта — чашки, ложки, ковши для кумыса и пива, мебель, наличники окон и музыкальные инструменты. Орнамент был преимущественно геометрическим, каждый узор нёс смысловую нагрузку.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">02</div>
+                    <h3 class="costume-item__title">Вышивка и ткачество</h3>
+                </div>
+                <p class="costume-item__text">Татарская вышивка выполнялась золотыми и серебряными нитями на бархате — техника, перенятая от среднеазиатских мастеров. Удмуртская вышивка — белая ткань с красным геометрическим узором — украшала рубахи, передники и полотенца.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">03</div>
+                    <h3 class="costume-item__title">Кожевенное ремесло</h3>
+                </div>
+                <p class="costume-item__text">Обработка кожи и меха была особенно развита у татар. Татарские мастера прославились кожаной мозаикой: цветные кусочки кожи сшивались в сложный орнаментальный узор — так украшали сапоги и туфли.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">04</div>
+                    <h3 class="costume-item__title">Ювелирное дело</h3>
+                </div>
+                <p class="costume-item__text">Серебряные украшения были важнейшей частью женского костюма у всех народов Поволжья. Татарские ювелиры делали тонкие филигранные украшения с цветной эмалью. Удмуртские нагрудники из монет и подвесок могли весить до трёх килограммов — такой «доспех» одновременно служил украшением, оберегом и демонстрацией достатка семьи.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Видео-материалы -->
+    <section class="section reveal">
+        <h2 class="section__title">Видео-материалы</h2>
+        <div class="videos-grid">
+            <a href="https://ya.ru/video/preview/11652635125883223556" target="_blank" class="video-card">
+                <div class="video-card__icon">▶</div>
+                <div class="video-card__content">
+                    <h3 class="video-card__title">Габдулла Тукай "Шүрәле"</h3>
+                    <span class="video-card__link">Смотреть видео</span>
+                </div>
+            </a>
+        </div>
+    </section>
+</div>
+
+<script src="povoliy.js"></script>
+</body>
+</html>

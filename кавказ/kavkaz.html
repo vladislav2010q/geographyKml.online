@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Народы Кавказа</title>
+    <link rel="stylesheet" href="kavkaz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Unbounded:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Фоновые эффекты -->
+<div class="bg">
+    <div class="aurora aurora--1"></div>
+    <div class="aurora aurora--2"></div>
+    <div class="aurora aurora--3"></div>
+    <div class="grid-overlay"></div>
+    <div class="noise"></div>
+</div>
+<!-- Основной контент -->
+<div class="scene">
+    <!-- Заголовок -->
+    <header class="hero">
+        <div class="hero__head">
+            <h1 class="title">
+                <span class="title__row">Народы Кавказа</span>
+            </h1>
+            <div class="hint">
+                <div class="hint__pulse"></div>
+                <span>Дагестанские, нахские, абхазо-адыгские и картвельские народы</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Список народов с изображениями -->
+    <section class="section reveal" id="peoples">
+        <h2 class="section__title">Народы</h2>
+        <div class="peoples-grid">
+            <div class="people-card" data-target="dagestani">
+                <div class="people-card__image">
+                    <img src="https://i.pinimg.com/originals/3b/99/79/3b997904d503a5186dd340e2753e7c30.jpg" alt="Дагестанские женщины в традиционной праздничной одежде" style="width:100%;height:100%;object-fit:cover;display:block;">
+                </div>
+                <div class="people-card__icon">◆</div>
+                <h3 class="people-card__name">Дагестанские народы</h3>
+                <p class="people-card__desc">Аварцы, даргинцы, лезгины, кумыки</p>
+            </div>
+            <div class="people-card" data-target="nakhi">
+                <div class="people-card__image">
+                    <img src="https://ar.culture.ru/attachments/attachment/middle/614848fcc93c4f56fd94db0f-middle.jpg" alt="Ингушский традиционный женский костюм" style="width:100%;height:100%;object-fit:cover;display:block;">
+                </div>
+                <div class="people-card__icon">◆</div>
+                <h3 class="people-card__name">Нахские народы</h3>
+                <p class="people-card__desc">Чеченцы и ингуши</p>
+            </div>
+            <div class="people-card" data-target="abkhazoadygi">
+                <div class="people-card__image">
+                    <img src="https://almode.club/uploads/posts/2021-03/1615874851_7-p-natsionalnaya-odezhda-cherkesov-9.jpg" alt="Мужской и женский черкесские традиционные костюмы" style="width:100%;height:100%;object-fit:cover;display:block;">
+                </div>
+                <div class="people-card__icon">◆</div>
+                <h3 class="people-card__name">Абхазо-адыгские народы</h3>
+                <p class="people-card__desc">Адыгейцы, кабардинцы, черкесы</p>
+            </div>
+            <div class="people-card" data-target="kartveli">
+                <div class="people-card__image">
+                    <img src="https://storage.georgia.travel/images/georgian-folklore-dance.webp" alt="Грузинский народный танец в традиционной одежде" style="width:100%;height:100%;object-fit:cover;display:block;">
+                </div>
+                <div class="people-card__icon">◆</div>
+                <h3 class="people-card__name">Картвельские народы</h3>
+                <p class="people-card__desc">Грузины, сваны, мингрелы</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Детальная информация о дагестанских народах -->
+    <section class="people-detail reveal" id="dagestani-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Дагестанские народы</h2>
+            <button class="people-detail__close" onclick="closeDetail('dagestani-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://ar.culture.ru/attachments/attachment/middle/5cc28e0a1c9472113f5e21ca-middle.jpg" alt="Кубачинская ювелирная работа — декоративная шкатулка" style="width:100%;height:260px;object-fit:cover;display:block;border-radius:16px;">
+                <img src="https://ar.culture.ru/attachments/attachment/middle/5cc28ea183740211e1600321-middle.jpg" alt="Серебряный пояс традиционного дагестанского костюма" style="width:100%;height:260px;object-fit:cover;display:block;border-radius:16px;">
+                <img src="https://ar.culture.ru/attachments/attachment/middle/5d4b6d511205af630a138ba5-middle.jpg" alt="Традиционное аварское женское нагрудное украшение из серебра" style="width:100%;height:260px;object-fit:cover;display:block;border-radius:16px;">
+            </div>
+            <div class="people-detail__text">
+                <p>Дагестанские народы — аварцы, даргинцы, лезгины, лакцы, кумыки, табасараны, агулы, азербайджанцы Дагестана и другие — коренные жители горных районов Северного Кавказа. На протяжении веков их обычаи, адаты, имели силу закона и объединяли все народы региона. Традиционные занятия — земледелие, отгонное скотоводство, а также ткачество, ковроделие, оружейное и ювелирное дело.</p>
+                <p>Костюм дагестанских народов многослойный: у женщин — туникообразная рубаха (перем), поверх неё распашное платье (валжаг) и облегающий кафтанчик (лабада), у мужчин — шуба черкесочного покроя, а также чухта (шутку, берчек, сарахуч). Шили одежду из сукна, украшали серебром и вышивкой.</p>
+                <p><strong>Адат и тухум.</strong> Ад — свод неписаных обычаев и нравственных норм, тухум — кровнородственный союз, который в трудную минуту помогал всем сразу. Основа социальной жизни — сельская община джамаат, а старший в ней пользовался особым авторитетом и справедливостью.</p>
+                <p><strong>Лезгинка.</strong> Лезгинский танец хаддардай макъам («могучий, сокрушающий») — быстрый парный танец, ставший символом народов всего Кавказа. Мужская партия танца символизирует образ орла, женская — плавное движение лебедя.</p>
+                <p><strong>Яран Сувар.</strong> Яран Сувар («праздник равноденствия») — центральное календарное событие лезгинской культуры. Празднование сопровождалось разжиганием ритуальных костров, через которые прыгали для символического очищения, выпечкой обрядового хлеба, выступлениями канатоходцев-пехлеванов и общинными гуляниями.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Детальная информация о нахских народах -->
+    <section class="people-detail reveal" id="nakhi-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Нахские народы</h2>
+            <button class="people-detail__close" onclick="closeDetail('nakhi-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://travelrussia.ru/upload/medialibrary/f21/uoxig7o4s8ea5yaub6iy9ta48p66mtix.jpg" alt="Башенный комплекс в горах Ингушетии" style="width:100%;height:260px;object-fit:cover;display:block;border-radius:16px;">
+                <img src="https://beauty-around.com/images/sampledata/Ingush_women/25/25.jpg" alt="Женщина в традиционном ингушском костюме" style="width:100%;height:260px;object-fit:cover;display:block;border-radius:16px;">
+                <img src="https://ar.culture.ru/attachments/attachment/middle/614848c1c40b8a56b1ae02b6-middle.jpg" alt="Ингушский традиционный мужской костюм" style="width:100%;height:260px;object-fit:cover;display:block;border-radius:16px;">
+            </div>
+            <div class="people-detail__text">
+                <p>Нахские народы — чеченцы и ингуши — коренные народы гор и предгорий Северного Кавказа. Их культура формировалась в условиях изоляции в горах и ущельях, поэтому здесь особенно сильны родовые связи, взаимопомощь и кодексы чести.</p>
+                <p>Костюм нахских народов рассчитан на горную погоду: тёплая шуба и бурка, войлочные и кожаные изделия, шапка, а у мужчин — пояс с кинжалом. Простота покроя сочеталась с богатством украшений: нагрудное серебро, кобальтовая нитка, гравировка и золочение.</p>
+                <p><strong>Къонахалла.</strong> Къонахалла — кодекс чести чеченцев, свод нравственных норм, которому подчинено поведение и человека, и общества. Он требовал хранить слово, уважать старших и гостя, защищать слабого — и считался обязательным условием сохранения достоинства.</p>
+                <p><strong>Гостеприимство и куначество.</strong> Гость для горца равнозначен посланнику небес. Конаки (гости) принимались в доме безотказно, а побратимство и куначество — институт кровного родства между семьями — скрепляли связи между аулами и народами.</p>
+                <p><strong>Башенные дома.</strong> В горных селениях традиционно строили каменные башни — кереги, летницы, наблюдательные и оборонительные сооружения. Такая застройка отражала и хозяйственный уклад, и тревожную память о набегах и усобицах, и вместе с тем указывала на высокое развитие каменного зодчества.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Детальная информация об абхазо-адыгских народах -->
+    <section class="people-detail reveal" id="abkhazoadygi-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Абхазо-адыгские народы</h2>
+            <button class="people-detail__close" onclick="closeDetail('abkhazoadygi-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://ar.culture.ru/attachments/attachment/middle/5ceab3cd940997404d6874cb-middle.jpg" alt="Адыгский женский традиционный костюм" style="width:100%;height:260px;object-fit:cover;display:block;border-radius:16px;">
+                <img src="https://i.pinimg.com/originals/56/e2/58/56e258ba069d9bf963a6dd998adca944.jpg" alt="Черкесский танец в традиционных костюмах" style="width:100%;height:260px;object-fit:cover;display:block;border-radius:16px;">
+                <img src="https://ar.culture.ru/attachments/attachment/middle/5d07b2c8337e5937f1abb638-middle.jpg" alt="Адыгский мужской традиционный костюм" style="width:100%;height:260px;object-fit:cover;display:block;border-radius:16px;">
+            </div>
+            <div class="people-detail__text">
+                <p>Абхазо-адыгские народы — адыгейцы, кабардинцы, черкесы, а также абхазы — коренные народы Кавказа, живущие у подножия Главного Кавказского хребта и вдоль Чёрного моря. Традиционные занятия — земледелие, скотоводство, садоводство, а также кузнечное и оружейное дело, которому адыги посвящали не только мастерство, но и статус.</p>
+                <p>Главный элемент мужского костюма — черкеска: длинная, чуть выше колен одежда с газырями на груди, изготовленная из сукна, часто на подкладке. К ней полагались бурка, папаха, пояс с кинжалом. Женский костюм — платье, передник, платок, украшения, а в праздничном варианте — серебряные нагрудники и бляхи.</p>
+                <p><strong>Адыгэ хабзэ.</strong> Адыгэ хабзэ — адыгская этико-философская доктрина, свод неписаных правил и законов, включающий нормы обычного права и нравственные принципы. Для адыгов хабзэ был не желательным, а обязательным законом: «хабзэ не носят на кончике языка, его соблюдают».</p>
+                <p><strong>Адыгство (адыгэ намыс).</strong> Адыгство — комплекс этических требований, куда входят честь, добропорядочность, честность, правдивость, стыд, уважение к старшим, к женщине, к гостю. В этих ценностях истоки горской чести и кавказского кодекса добродетели.</p>
+                <p><strong>Нартский эпос.</strong> Сказания о Нартах — древний эпос, который в разных вариантах известны у адыгов, осетин, грузин, армян и других народов Кавказа. Герои эпоса сражались со Змеем, добывали чудесные сады, оружие и скакунов, а сами сказания послужили источником «Осетинских сказаний» и «Витязя в тигровой шкуре».</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Детальная информация о картвельских народах -->
+    <section class="people-detail reveal" id="kartveli-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Картвельские народы</h2>
+            <button class="people-detail__close" onclick="closeDetail('kartveli-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://merisnews.wordpress.com/wp-content/uploads/2015/03/150912_299197520200767_380109134_n.jpg?w=640" alt="Традиционная одежда Тушетии в грузинской народной культуре" style="width:100%;height:260px;object-fit:cover;display:block;border-radius:16px;">
+                <img src="https://storage.georgia.travel/images/traditsiuli-samosi-qartuli-klasikuri-samosi.webp" alt="Классический грузинский традиционный костюм" style="width:100%;height:260px;object-fit:cover;display:block;border-radius:16px;">
+                <img src="https://storage.georgia.travel/images/traditsiuli-samosi-saqartvelos-mtis-khalkhta-chatsmuloba-1.webp" alt="Традиционные головные уборы горных районов Грузии" style="width:100%;height:260px;object-fit:cover;display:block;border-radius:16px;">
+            </div>
+            <div class="people-detail__text">
+                <p>Картвельские народы — грузины, сваны, мингрелы, чети — коренные народы Кавказа, живущие от Чёрного моря до предгорий Большого Кавказа. Они говорят на языках картвельской семьи и на протяжении веков сохраняли общие черты языка, кухни, свадебных и застольных традиций.</p>
+                <p>Костюм картвельских народов подчёркивает строй и статус: мужская одежда длиной до щиколотки с поясом, поверх которого носили кинжал, а также папаха и бурка; женская — длинное платье, пояс, платок, а в праздничном уборе серебряные украшения и нагрудные бляхи.</p>
+                <p><strong>Тамада и тост.</strong> Тамада — старший за столом, который вёл застолье, следил за порядком и первым поднимал бокал. Тост в картвельской традиции — не просто поздравление, а приговор-благословение, произносимое осмысленно и назидательно.</p>
+                <p><strong>Духан и симпозий.</strong> Духан — общее застолье как форма повседневного общения, а симпозий — мужское собрание для разговора, песни, спора и решения общих дел. Там же звучали народные песни и сказания, а поэзия и песня сопровождали любой праздник.</p>
+                <p><strong>Сказания о Нартах и поэзия.</strong> Общий кавказский эпос о Нартах известен и грузинскому народу, а самобытная грузинская поэтическая традиция (Шота Руставели и другие) развивалась в связке с музыкой, сказительством и устной историей.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Стихотворение -->
+    <section class="section reveal">
+        <blockquote class="poem">
+            <div class="poem__text">
+                И каждый здесь горец и житель,<br>
+                В жилище откроет вам дверь!<br>
+                Он гостя накормит, напоит,<br>
+                И сытым уложит в постель,<br>
+                Такими всегда они были,<br>
+                Такими остались теперь!
+            </div>
+            <cite class="poem__author">— А. Козин</cite>
+        </blockquote>
+    </section>
+
+    <!-- Географические особенности с изображением -->
+    <section class="section reveal">
+        <h2 class="section__title">Географические особенности</h2>
+        <div class="geography-block">
+            <div class="geography-image">
+                <img src="https://storage.georgia.travel/images/mtebi-da-mtsvervalebi-tetnuldi.webp" alt="Кавказские горы — высокогорный ландшафт" style="width:100%;height:auto;display:block;">
+            </div>
+            <div class="geography-text">
+                <p>Кавказские горы — горная система между Чёрным и Каспийским морями, протянувшаяся более чем на 1100 км с северо-запада на юго-восток. Высочайшая вершина — Эльбрус (5642 м), самая высокая точка России и Европы при проведении границы между Европой и Азией по Главному Кавказскому хребту.</p>
+                <p>Горные хребты, ущелья, реки и особый климат наложили глубокий отпечаток на культуру и менталитет населяющих Кавказ народов. Снежные вершины Главного хребта сменяются альпийскими лугами, лесами и предгорными степями, а реки Терек, Кубань и Кума, стекая с ледников, питают жизнь в глубоких ущельях и на равнинах.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея традиционных костюмов -->
+    <section class="section reveal">
+        <h2 class="section__title">Галерея традиционных костюмов</h2>
+        <div class="costume-gallery">
+            <div class="costume-gallery__item">
+                <img src="https://storage.georgia.travel/images/mtebi-da-mtsvervalebi-ushba.webp" alt="Кавказские горы — снежные вершины и ледники" style="width:100%;height:280px;object-fit:cover;display:block;">
+                <div class="costume-gallery__caption">Классический грузинский костюм</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://ar.culture.ru/attachments/attachment/middle/5cc287de83740211e16002e5-middle.jpg" alt="Традиционное дагестанское свадебное украшение" style="width:100%;height:280px;object-fit:cover;display:block;">
+                <div class="costume-gallery__caption">Традиционные головные уборы горных районов Грузии</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://krasavica.info/uploads/posts/2023-07/1689348217_krasavica-info-p-braslet-kubachi-zhenskie-pinterest-2.jpg" alt="Кубачинский серебряный браслет" style="width:100%;height:280px;object-fit:cover;display:block;">
+                <div class="costume-gallery__caption">Традиционные горные головные уборы и одежда</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://i.pinimg.com/736x/3f/cc/8e/3fcc8e261ac82a1cb7e25cfa6ae26087.jpg" alt="Традиционный лезгинский женский костюм Дагестана" style="width:100%;height:280px;object-fit:cover;display:block;">
+                <div class="costume-gallery__caption">Высокогорные пейзажи Кавказа</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://i.etsystatic.com/6962381/r/il/9a4d2a/6930756092/il_fullxfull.6930756092_fu88.jpg" alt="Кубачинский серебряный браслет с традиционной филигранью" style="width:100%;height:280px;object-fit:cover;display:block;">
+                <div class="costume-gallery__caption">Дагестанские украшения и ювелирное искусство</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://storage.georgia.travel/images/traditsiuli-samosi-saqartvelos-mtis-khalkhta-chatsmuloba-2.webp" alt="Традиционные головные уборы горных грузин" style="width:100%;height:280px;object-fit:cover;display:block;">
+                <div class="costume-gallery__caption">Лезгинский традиционный костюм и украшения</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Традиционные костюмы -->
+    <section class="section reveal">
+        <h2 class="section__title">Традиционные костюмы</h2>
+        <div class="intro-text">
+            <p>Традиционные костюмы народов Кавказа отражают суровый горный климат и кочевой уклад: мех оленя, ровдуга, рыбьи кожи, геометрический орнамент и обережные узоры. При общем сходстве многих элементов — например, черкески у мужчин или многослойности у женщин — у каждого этноса есть свои уникальные детали в покрое, орнаментах и аксессуарах. Одежда часто была многослойной, с чётким разделением на повседневную и праздничную, а также указывала на социальный статус.</p>
+        </div>
+
+        <div class="costumes-grid">
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">01</div>
+                    <h3 class="costume-item__title">Основа костюма</h3>
+                </div>
+                <p class="costume-item__text">Основой мужского костюма служила черкеска — длинная одежда из плотного сукна, чаще с газырями на груди, которую носили с буркой, папахой и поясом с кинжалом.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">02</div>
+                    <h3 class="costume-item__title">Вышивка и декор</h3>
+                </div>
+                <p class="costume-item__text">Орнаменты (геометрические, зооморфные, растительные) и цветовые решения несли обережный и тотемный смысл, связанный с защитой, плодородием и почитанием предков. Вышивка располагалась на груди, рукавах, подоле, по вороту и краям одежды.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">03</div>
+                    <h3 class="costume-item__title">Пояс</h3>
+                </div>
+                <p class="costume-item__text">Важный элемент костюма, который делил фигуру на верхнюю (связанную с верхним миром) и нижнюю (связанную с земным миром) части. На поясе носили кинжал, ножны и оружейный прибор.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">04</div>
+                    <h3 class="costume-item__title">Головные уборы</h3>
+                </div>
+                <p class="costume-item__text">У мужчин папаха была практичной частью костюма горца, а у женщин головные уборы служили маркером возраста, семейного положения и этнической принадлежности. У лезгин носили чухту (шутку, берчек, сарахуч), у картвельских и абхазо-адыгских народов — платки и фасонитые чепцы.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">05</div>
+                    <h3 class="costume-item__title">Украшения</h3>
+                </div>
+                <p class="costume-item__text">Обилие шейно-нагрудных украшений (серебряные бляхи, монеты, подвески, кобальтовая нитка) было характерной чертой горского костюма и выполняло обережную функцию.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Творчество -->
+    <section class="section reveal">
+        <h2 class="section__title">Творчество</h2>
+        <div class="content-block">
+            <p>В литературе — как в произведениях самих кавказских авторов, так и в русской классике — прослеживается общий культурный фундамент народов Кавказа. В сказаниях герои часто действуют в конкретных географических локациях — у Эльбруса, в Дарьяльском ущелье, на берегах Терека. Эпос отражает не только мифологические представления, но и реальные топонимы, а также ценности, важные для общества: честь, мужество, гостеприимство.</p>
+        </div>
+    </section>
+
+    <!-- Видео-материалы -->
+    <section class="section reveal">
+        <h2 class="section__title">Видео-материалы</h2>
+        <div class="videos-grid">
+            <a href="https://ya.ru/video/preview/17179352441907996322" target="_blank" class="video-card">
+                <div class="video-card__icon">▶</div>
+                <div class="video-card__content">
+                    <h3 class="video-card__title">Сказания о Нартах — Часть 1 — Осетинский эпос</h3>
+                    <span class="video-card__link">Смотреть видео</span>
+                </div>
+            </a>
+
+            <a href="https://ya.ru/video/preview/16236061311816232073" target="_blank" class="video-card">
+                <div class="video-card__icon">▶</div>
+                <div class="video-card__content">
+                    <h3 class="video-card__title">Дагестанская народная сказка «Глупый волк»</h3>
+                    <span class="video-card__link">Смотреть видео</span>
+                </div>
+            </a>
+        </div>
+    </section>
+</div>
+
+<script src="kavkaz.js"></script>
+
+</body>
+</html>

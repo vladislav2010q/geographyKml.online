@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Народы Центральной России</title>
+
+    <link rel="stylesheet" href="central-russia.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Unbounded:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Фоновые эффекты -->
+
+    <div class="bg">
+
+        <div class="aurora aurora--1"></div>
+
+        <div class="aurora aurora--2"></div>
+
+        <div class="aurora aurora--3"></div>
+
+        <div class="grid-overlay"></div>
+
+        <div class="noise"></div>
+
+    </div>
+
+    <!-- Основной контент -->
+
+<div class="scene">
+
+    <!-- Заголовок -->
+
+    <header class="hero">
+
+        <div class="hero__head">
+
+            <h1 class="title">
+
+                <span class="title__row">Народы Центральной России</span>
+
+            </h1>
+
+            <div class="hint">
+
+                <div class="hint__pulse"></div>
+
+                <span>Русские, марийцы, мордва, чуваши</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Список народов с изображениями -->
+
+    <section class="section reveal" id="peoples">
+
+        <h2 class="section__title">Народы</h2>
+
+        <div class="peoples-grid">
+
+            <div class="people-card" data-target="russians">
+
+                <div class="people-card__image">
+
+                    <img src="https://travelask.ru/system/images/files/001/226/116/wysiwyg_jpg/Svadbavrusskomstile_ru_svatovstvo_2.jpg?1542300096" alt="Русские — женщина в традиционном народном костюме">
+
+                </div>
+
+                <div class="people-card__icon">✦</div>
+
+                <h3 class="people-card__name">Русские</h3>
+
+                <p class="people-card__desc">Коренной народ России</p>
+
+            </div>
+
+            <div class="people-card" data-target="mari">
+
+                <div class="people-card__image">
+
+                    <img src="https://znamya-tonkino.ru/media/resized/iL4gz_6wtz2QB-8gYeebSvB_tZ8cVgsHqWMDSPOdaWU/rs:fit:1024:768/aHR0cHM6Ly96bmFt/eWEtdG9ua2luby5y/dS9tZWRpYS9wcm9q/ZWN0X3NtaTNfODQ5/L2YxLzRmL2M0L2Iy/LzdmLzlkL2RzY18w/MTA1LmpwZw.jpg" alt="Марийцы — лесной народ Поволжья">
+
+                </div>
+                <div class="people-card__icon">✦</div>
+
+                <h3 class="people-card__name">Марийцы</h3>
+
+                <p class="people-card__desc">Лесной народ</p>
+
+            </div>
+
+            <div class="people-card" data-target="mordva">
+
+                <div class="people-card__image">
+
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Erzya_women.jpg/1280px-Erzya_women.jpg" alt="Мордва — эрзя и мокша в национальных нарядах">
+
+                </div>
+
+                <div class="people-card__icon">✦</div>
+
+                <h3 class="people-card__name">Мордва</h3>
+
+                <p class="people-card__desc">Эрзя и мокша</p>
+
+            </div>
+
+            <div class="people-card" data-target="chuvash">
+
+                <div class="people-card__image">
+
+                    <img src="https://avatars.mds.yandex.net/i?id=2a6a28d9c368cb3df7e0e68a957b24fc_l-10313458-images-thumbs&n=13" alt="Чуваши — наследники Волжской Булгарии">
+
+                </div>
+
+                <div class="people-card__icon">✦</div>
+
+                <h3 class="people-card__name">Чуваши</h3>
+
+                <p class="people-card__desc">Наследники Волжской Булгарии</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+<!-- Детальная информация о русских -->
+    <section class="people-detail reveal" id="russians-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Русские</h2>
+            <button class="people-detail__close" onclick="closeDetail('russians-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://trk7.ru/upload/iblock/8e9/2iml1b0u3jjmcy3yr5nju8y82cxwdg86.jpg" alt="Русский народный костюм" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://secretmag.ru/imgs/2024/12/11/14/6680806/5f847aeb5e719a23c5cbfe40108bd6386469dcf0.jpg" alt="Масленица — блины и проводы зимы" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://thecity.m24.ru/b/d/SYketSiveYo6IPjQfurQC04VAx5tdWH8mYxfOS8Xp1Gj5pqKzWTJSFS-PsArI08gRZaK1yZktQXWesHOaOz7FWcJ5xZMng=p3PD_l58t5BjuM6GolDVDA.jpg" alt="Иван Купала — летнее солнцестояние и костры" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+            </div>
+            <div class="people-detail__text">
+                <p>Русские — самый многочисленный народ Центральной России. Их традиции и обычаи складывались веками, вобрав в себя как древние языческие обряды, так и христианские праздники.</p>
+                <p><strong>Масленица.</strong> Изначально это был языческий праздник проводов зимы. Каждый день масленичной недели имел своё название и традиции: в понедельник — «Встреча», в среду — «Лакомка», в субботу — «Тёщины вечёрки». Главное угощение — блины, которые символизировали солнце.</p>
+                <p><strong>Святки.</strong> Период от Рождества до Крещения (6–19 января) сопровождался гуляньями, колядованием (обрядовым обходом домов с пожеланиями урожая и благополучия) и святочными гаданиями.</p>
+                <p><strong>Иван Купала.</strong> Праздник летнего солнцестояния (24 июня). В эту ночь было принято прыгать через костёр, плести венки, искать цветок папоротника.</p>
+                <p>Русский костюм характеризуется многослойностью: рубаха, сарафан, понева, передник. В северных губерниях преобладали красный, синий и чёрный цвета, в южных — красный. Праздничный костюм мог включать около 20 предметов.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Детальная информация о марийцах -->
+    <section class="people-detail reveal" id="mari-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Марийцы</h2>
+            <button class="people-detail__close" onclick="closeDetail('mari-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://ic.pics.livejournal.com/selyanka1/80512851/1553429/1553429_original.jpg" alt="Марийский традиционный костюм и природа" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://kidsher.ru/ru/wp-content/uploads/2025/06/semyk-v-tatarstane.jpg" alt="Марийский праздник в лесу" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://i.ytimg.com/vi/5ghIYvwWaAA/maxresdefault.jpg" alt="Берёзовый лес — природа Марий Эл" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+            </div>
+            <div class="people-detail__text">
+                <p>Марийцы (черемисы) — финно-угорский народ, проживающий в Республике Марий Эл и соседних регионах. Традиционно занимались земледелием, охотой и бортничеством. Марийцы — один из немногих народов Европы, сохранивших дохристианскую языческую религию как живую традицию: многие семьи по сей день молятся в священных рощах, а не в храмах.</p>
+                <p>Марийский костюм отличается туникообразным покроем рубах, богатой вышивкой с геометрическими и растительными орнаментами. Характерны красные и белые цвета, обилие монетных украшений — бляшек, подвесок и нагрудников, которые не только украшали, но и служили оберегами.</p>
+                <p><strong>Üштö — праздник весеннего сева.</strong> Перед началом полевых работ марийцы собирались на общую молитву в священной роще (кÿсото). Жрец-карт обращался к верховному богу Юмо с просьбой даровать урожай, после чего разжигался общий костёр и варилась ритуальная каша из зерна нового сезона. Считалось, что без этого обряда семена не взойдут.</p>
+                <p><strong>Сÿрем — праздник изгнания злых духов.</strong> Проводился в середине лета. Участники обходили деревню с шумом, криками и трещотками, прогоняя нечисть за её пределы. Затем у реки разводили большой костёр и бросали в него старые вещи — символически очищая дом и семью от накопившихся бед и болезней.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Детальная информация о мордве -->
+    <section class="people-detail reveal" id="mordva-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Мордва</h2>
+            <button class="people-detail__close" onclick="closeDetail('mordva-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://avatars.mds.yandex.net/i?id=5f709dcd769d7e37a2a2a51e71607c3f_l-2440567-images-thumbs&n=13" alt="Мордовский народный костюм" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://avatars.mds.yandex.net/i?id=d878947634d54bbadbc5647bb5f76727_l-10608704-images-thumbs&n=13" alt="Мордовская свадьба — торжество и обряды" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://avatars.mds.yandex.net/i?id=9edc9bbbe81014fa0e48e74b2e7b002a_l-5232402-images-thumbs&ref=rim&n=13&w=1170&h=788" alt="Праздник Акша Келу — обряд плодородия" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+            </div>
+            <div class="people-detail__text">
+                <p>Мордва делится на два субэтноса: эрзю и мокшу. Проживают в Республике Мордовия и соседних областях. Традиционные занятия — земледелие, скотоводство, бортничество.</p>
+                <p><strong>Мордовская свадьба.</strong> Свадебные ритуалы у мордвы длительные и насыщенные: были и сватовство, и похищение невесты, и особые обряды перед самим торжеством (например, девичник с плетением украшений и вышивкой рушников).</p>
+                <p><strong>Музыкальный инструмент торама.</strong> Это духовой инструмент, похожий на трубу. Его звук символизировал надежду и единение: в тораму трубили перед битвами, началом полевых работ или при выгоне стад на пастбища.</p>
+                <p><strong>Праздник «Акша Келу».</strong> Один из главных народных праздников, посвящённый плодородию. Участники выходят в национальных костюмах, устраивают гулянья и обряды, связанные с плодородием земли.</p>
+                <p>Мордовский костюм отличается сложностью и многослойностью. У эрзи — высокие головные уборы на твёрдой основе (панго, сорока), у мокши — трапециевидные чепцы. Характерны красные цвета и богатая вышивка.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Детальная информация о чувашах -->
+    <section class="people-detail reveal" id="chuvash-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Чуваши</h2>
+            <button class="people-detail__close" onclick="closeDetail('chuvash-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://avatars.mds.yandex.net/i?id=bff7c4ab75d793bb0361a3e7dd52bdea_l-12428376-images-thumbs&n=13" alt="Чувашский женский костюм с вышивкой" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://voyagemagazine.ru/wp-content/uploads/2024/06/image_2024-06-14_11-59-30.png" alt="Чувашская вышивка — чăваш тĕрри" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://avatars.mds.yandex.net/i?id=4227a8d2c8835d97b06216ae408a227c_l-5257022-images-thumbs&n=13" alt="Чувашская резьба по дереву" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+            </div>
+            <div class="people-detail__text">
+                <p>Чуваши — один из самых самобытных и многочисленных коренных народов. Их язык — единственный живой представитель древней булгарской ветви, а быт и мировоззрение сохранили отголоски язычества, православия и многовекового соседства с другими народами.</p>
+                <p><strong>Вышивка (чăваш тĕрри)</strong> — один из основных видов чувашского народного орнаментального искусства. Она выполнялась на домотканом холсте с помощью иглы и нитей. Среди характерных особенностей — геометричность узоров в орнаменте. Основной красный цвет дополнялся зелёными, синими и жёлтыми оттенками. В прошлом вышивка выполняла не только декоративную, но и защитную функцию, оберегая владельца от злых духов.</p>
+                <p>Умельцы, занимающиеся резьбой по дереву, украшали чашки, ложки, ковши для пива, мебель, наличники окон, музыкальные инструменты и другие предметы быта. Орнамент, как и в вышивке, был в основном геометрическим.</p>
+                <p>Чувашский костюм отличается яркой вышивкой с красно-чёрными узорами. Женский костюм включает рубаху, передник, пояс, головной убор (хушпу). Орнаменты несли обережную функцию. Традиционная кухня чувашей отражает земледельческий уклад и соседство с другими народами Поволжья.</p>
+                <p><strong>Акатуй — праздник плуга.</strong> Один из главных народных праздников чувашей, посвящённый окончанию весенней пахоты. Название буквально переводится как «свадьба плуга» — земля воспринималась как невеста, а сев — как священный союз человека с природой. В праздник устраивались скачки, борьба на кушаках (тутăш), песни и хороводы. Победители соревнований считались любимцами духов-хранителей и пользовались особым уважением в общине.</p>
+                <p><strong>Чувашская мифология и пиво (сăра).</strong> Чуваши почитали множество духов-хранителей: домашнего (херт-сурт), духа двора (картиш ийи) и духа овина (авăн ийи). Задабривали их угощением — прежде всего домашним пивом сăра, которое варили из ячменя и хмеля по старинным рецептам. Пиво присутствовало на каждом обряде: рождении, свадьбе, поминках. Без него считалось невозможным ни попросить у духов удачи, ни поблагодарить их за помощь.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Стихотворение -->
+
+    <section class="section reveal">
+
+        <blockquote class="poem">
+
+            <div class="poem__text">
+
+                На бескрайних просторах Центральной России<br>
+
+                Наше сердце, наш дом, наши песни, мечты…<br>
+
+                Это наша земля, мы другой не просили!<br>
+
+                И стремления наши не смогут остыть!
+
+            </div>
+
+            <cite class="poem__author">— Е. Колотилов</cite>
+
+        </blockquote>
+
+    </section>
+
+
+
+    <!-- Географические особенности с изображением -->
+
+    <section class="section reveal">
+
+        <h2 class="section__title">Географические особенности</h2>
+
+        <div class="geography-block">
+
+            <div class="geography-image">
+
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Природа Центральной России — леса, реки и равнины">
+
+            </div>
+
+            <div class="geography-text">
+
+                <p>Центральная Россия — это регион, расположенный в центре Восточно-Европейской (Русской) равнины. В основании территории лежит древняя Русская платформа, что обусловило преимущественно равнинный рельеф.</p>
+
+                <p>Климат умеренно-континентальный, формируется под влиянием западного переноса воздушных масс с Атлантического океана. Обширные леса, реки и поля сформировали особый уклад жизни местных народов.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Галерея традиционных костюмов -->
+
+    <section class="section reveal">
+
+        <h2 class="section__title">Галерея традиционных костюмов</h2>
+
+        <div class="costume-gallery">
+
+            <div class="costume-gallery__item">
+
+                <img src="https://cs2.livemaster.ru/storage/c3/24/f38c3a6b98e6b6a06460731633kn--russkij-stil-russkij-sarafan-ladai-rubaha-s-vyshivkoj-krestik.jpg" alt="Русский сарафан с вышивкой">
+
+                <div class="costume-gallery__caption">Русский сарафан с вышивкой</div>
+
+            </div>
+
+            <div class="costume-gallery__item">
+
+                <img src="https://maskaradrostov.ru/image/access/photo/10275.ashx?profile=thumbnail" alt="Мордовский головной убор">
+
+                <div class="costume-gallery__caption">Мордовский головной убор</div>
+
+            </div>
+
+            <div class="costume-gallery__item">
+
+                <img src="https://народы74.рф/assets/manager/%D0%9C%D0%B0%D1%80%D0%B8%D0%B9%D1%86%D1%8B/tradiczionnyij-zhenskij-marijskij-naryad.jpg" alt="Марийский праздничный наряд">
+
+                <div class="costume-gallery__caption">Марийский праздничный наряд</div>
+
+            </div>
+
+            <div class="costume-gallery__item">
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Lower_Chuvash_attire%2C_Chuvash_girl.jpg" alt="Чувашский женский костюм">
+
+                <div class="costume-gallery__caption">Чувашский женский костюм</div>
+
+            </div>
+
+            <div class="costume-gallery__item">
+
+                <img src="https://ljplus.ru/img4/u/l/uliana/dsc_0507.jpg" alt="Традиционная вышивка">
+
+                <div class="costume-gallery__caption">Традиционная вышивка (чувашская и русская)</div>
+
+            </div>
+
+            <div class="costume-gallery__item">
+
+                <img src="https://avatars.mds.yandex.net/i?id=35dbf89a0a3105ea747c4b449005bbe1_l-10591076-images-thumbs&n=13" alt="Народы Центральной России в праздничных нарядах">
+
+                <div class="costume-gallery__caption">Народы Центральной России</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Традиционные костюмы -->
+
+    <section class="section reveal">
+
+        <h2 class="section__title">Традиционные костюмы</h2>
+
+        <div class="intro-text">
+
+            <p>Национальный костюм народов Центральной России — это не просто одежда, а сложное культурное явление, которое складывалось на протяжении веков. Он отражал не только эстетические предпочтения, но и географические, климатические, социальные и даже семейные особенности.</p>
+
+        </div>
+
+        
+
+        <div class="costumes-grid">
+
+            <div class="costume-item">
+
+                <div class="costume-item__header">
+
+                    <div class="costume-item__number">01</div>
+
+                    <h3 class="costume-item__title">Многослойность</h3>
+
+                </div>
+
+                <p class="costume-item__text">Ношение менее трёх слоёв одежды считалось неблагопристойным. По поверьям, многослойность защищала от сглаза. Праздничный женский костюм мог включать около 20 предметов, а повседневный — всего семь.</p>
+
+            </div>
+
+
+
+            <div class="costume-item">
+
+                <div class="costume-item__header">
+
+                    <div class="costume-item__number">02</div>
+
+                    <h3 class="costume-item__title">Цветовая гамма</h3>
+
+                </div>
+
+                <p class="costume-item__text">В традиционных костюмах часто использовался красный цвет, который символизировал плодородие, пламень и солнечный свет. В разных губерниях предпочитали разные оттенки: в Тульской и Курской областях — красные нити, в Воронежской — чёрные.</p>
+
+            </div>
+
+
+
+            <div class="costume-item">
+
+                <div class="costume-item__header">
+
+                    <div class="costume-item__number">03</div>
+
+                    <h3 class="costume-item__title">Региональные различия</h3>
+
+                </div>
+
+                <p class="costume-item__text">На покрой, орнамент и цвет сильно влияло географическое положение и местные традиции. Например, в северных и центральных губерниях преобладали красный, синий и чёрный цвета, а в южных часто доминировал красный.</p>
+
+            </div>
+
+
+
+            <div class="costume-item">
+
+                <div class="costume-item__header">
+
+                    <div class="costume-item__number">04</div>
+
+                    <h3 class="costume-item__title">Социальный статус</h3>
+
+                </div>
+
+                <p class="costume-item__text">У знати сложные платья подчёркивали достаток, тогда как у крестьян одежда была практичной и простой. Костюм служил маркером социального положения и семейного статуса.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Устное народное творчество -->
+
+    <section class="section reveal">
+
+        <h2 class="section__title">Устное народное творчество</h2>
+
+        <div class="content-block">
+
+            <p>Устное народное творчество — сила и мудрость народа. Сказки, былины, песни передавались из поколения в поколение, сохраняя историю, традиции и нравственные ценности.</p>
+
+            <p>Былины о богатырях, сказки о животных и волшебные истории формировали мировоззрение, учили добру, справедливости и любви к родной земле.</p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Видео-материалы -->
+
+    <section class="section reveal">
+
+        <h2 class="section__title">Видео-материалы</h2>
+
+        <div class="videos-grid">
+
+            <a href="https://ya.ru/video/preview/6036053637953223502" target="_blank" class="video-card">
+
+                <div class="video-card__icon">▶</div>
+
+                <div class="video-card__content">
+
+                    <h3 class="video-card__title">«Илья Муромец»</h3>
+
+                    <span class="video-card__link">Смотреть видео</span>
+
+                </div>
+
+            </a>
+
+
+
+            <a href="https://ya.ru/video/preview/3942696166645669516" target="_blank" class="video-card">
+
+                <div class="video-card__icon">▶</div>
+
+                <div class="video-card__content">
+
+                    <h3 class="video-card__title">Сивка-Бурка</h3>
+
+                    <span class="video-card__link">Русская народная сказка</span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+
+<script src="central-russia.js"></script>
+
+</body>
+
+</html>

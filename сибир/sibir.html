@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Народы Сибири</title>
+    <link rel="stylesheet" href="sibir.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Unbounded:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Фоновые эффекты -->
+<div class="bg">
+    <div class="aurora aurora--1"></div>
+    <div class="aurora aurora--2"></div>
+    <div class="aurora aurora--3"></div>
+    <div class="grid-overlay"></div>
+    <div class="noise"></div>
+</div>
+<!-- Основной контент -->
+<div class="scene">
+    <!-- Заголовок -->
+    <header class="hero">
+        <div class="hero__head">
+            <h1 class="title">
+                <span class="title__row">Народы Сибири</span>
+            </h1>
+            <div class="hint">
+                <div class="hint__pulse"></div>
+                <span>Эвенки, эвены, нанайцы и другие тунгусо-маньчжурские народы</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Список народов с изображениями -->
+    <section class="section reveal" id="peoples">
+        <h2 class="section__title">Народы</h2>
+        <div class="peoples-grid">
+            <div class="people-card" data-target="evenki">
+                <div class="people-card__image">
+                    <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Evenk%20family%20in%20the%20early%201900s.jpg" alt="Эвенкийская семья, начало XX века">
+                </div>
+                <div class="people-card__icon">✦</div>
+                <h3 class="people-card__name">Эвенки</h3>
+                <p class="people-card__desc">Тунгусо-маньчжурский народ тайги и тундры</p>
+            </div>
+            <div class="people-card" data-target="eveny">
+                <div class="people-card__image">
+                    <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Even%20women.jpg" alt="Группа женщин-эвенов в традиционной одежде">
+                </div>
+                <div class="people-card__icon">✦</div>
+                <h3 class="people-card__name">Эвены</h3>
+                <p class="people-card__desc">Народ северной тайги и оленеводства</p>
+            </div>
+            <div class="people-card" data-target="nanai">
+                <div class="people-card__image">
+                    <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Hezhe%20%28Nanai%29%20family.jpg" alt="Нанайская семья в традиционной одежде, бассейн Амура">
+                </div>
+                <div class="people-card__icon">✦</div>
+                <h3 class="people-card__name">Нанайцы</h3>
+                <p class="people-card__desc">Народ Амура и дальневосточной тайги</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Детальная информация: Эвенки -->
+    <section class="people-detail reveal" id="evenki-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Эвенки</h2>
+            <button class="people-detail__close" onclick="closeDetail('evenki-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/T%C3%B8j%20til%20voksen%20person%20fra%20evenker%20i%20Nord%C3%B8stsibirien%20-%20Adult%20clothing%20from%20Evenks%20in%20northeastern%20Siberia%20%2815329982012%29.jpg" alt="Традиционная одежда эвенков из оленьей кожи" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Evenki%20shaman.jpg" alt="Эвенкийский шаман в традиционном облачении" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Evenki%20tent%20made%20by%20birchbark%2C%20Aug%202019.jpg" alt="Эвенкийское жилище из бересты" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+            </div>
+            <div class="people-detail__text">
+                <p>Эвенки — один из тунгусо-маньчжурских народов Сибири. Суровый континентальный климат с долгими зимами и коротким летом формировал особый склад характера — жизнестойкость, упорство, способность к преодолению трудностей. В литературе это проявляется через мотивы борьбы человека со стихией, поиска гармонии с суровой природой.</p>
+                <p>Полярная ночь и северное сияние становились не просто природными явлениями, а мощными символами, через которые авторы передают ощущение пограничности, столкновения человеческого и сверхчеловеческого, сакрального. У коренных народов Сибири сложился особый, анимистический взгляд на мир — вера в то, что природа одушевлена, а у каждого элемента есть свой дух.</p>
+                <p>Это находит прямое отражение в фольклоре: в сказках животные (олень, медведь) выступают как тотемные предки или помощники, а шаманские ритуалы тесно переплетены с культом природы. Таким образом, география Сибири не просто окружала народы, но и формировала их менталитет, мифологию и художественный язык.</p>
+                <p><strong>Охота и оленеводство.</strong> Охота и рыболовство — ключевые занятия эвенков, которые напрямую зависели от природных условий. В текстах подробно описываются охотничьи хитрости, повадки зверей и ритуалы, связанные с добычей пищи.</p>
+                <p><strong>Сотворение мира.</strong> В эвенкийских сказках часто встречаются сюжеты о сотворении мира, где важную роль играют образы Солнца, Луны и бессмертной души.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Детальная информация: Эвены -->
+    <section class="people-detail reveal" id="eveny-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Эвены</h2>
+            <button class="people-detail__close" onclick="closeDetail('eveny-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%D0%AD%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BC%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BA%D0%BE%D1%81%D1%82%D1%8E%D0%BC%20%28%D0%90%D1%8F%D0%BD%D0%BE-%D0%9C%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%29.JPG" alt="Эвенский мужской костюм, Аяно-Майский район" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Evens%20in%20Kamchatka%20Peninsula%20%28from%20a%20book%20Published%20in%201931%29%20P.73.png" alt="Эвены Камчатки, фотография из издания 1931 года" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://atlaskmns.ru/files/evenki/people_evenki_spirit_pic005.jpg" alt="Эвенские женщины в традиционной одежде" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+            </div>
+            <div class="people-detail__text">
+                <p>Эвены — тунгусо-маньчжурский народ, тесно связанный с жизнью в северной тайге и оленеводством. Кочевой образ жизни был продиктован необходимостью следовать за сезонными изменениями: искать пастбища для оленей, охотиться в определённых местах.</p>
+                <p>Резко континентальный климат с долгими зимами и коротким летом формировал особый склад характера — жизнестойкость, упорство, способность к преодолению трудностей. В литературе это проявляется через мотивы борьбы человека со стихией, поиска гармонии с суровой природой.</p>
+                <p>У коренных народов Сибири сложился особый, анимистический взгляд на мир — вера в то, что природа одушевлена, а у каждого элемента есть свой дух. Это находит прямое отражение в фольклоре: в сказках животные (олень, медведь) выступают как тотемные предки или помощники, а шаманские ритуалы тесно переплетены с культом природы.</p>
+                <p><strong>Полярная ночь и северное сияние.</strong> Эти явления становились не просто природными, а мощными символами, через которые передаётся ощущение пограничности, столкновения человеческого и сверхчеловеческого, сакрального.</p>
+                <p><strong>Взаимодействие с природой.</strong> География Сибири не просто окружала народы, но и формировала их менталитет, мифологию и художественный язык. Литература стала способом осмысления уникального взаимодействия человека и природы.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Детальная информация: Нанайцы -->
+    <section class="people-detail reveal" id="nanai-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Нанайцы</h2>
+            <button class="people-detail__close" onclick="closeDetail('nanai-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%D0%9D%D0%B0%D0%BD%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%BE%D1%81%D1%82%D1%8E%D0%BC%2C%20%D0%A1%D0%B8%D0%BA%D0%B0%D1%87%D0%B8-%D0%90%D0%BB%D1%8F%D0%BD.JPG" alt="Нанайский женский костюм, Сикачи-Алян" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Goldes%20shaman%20priest%20in%20his%20regalia%20LCCN2004707515.jpg" alt="Нанайский шаман в ритуальном облачении" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Goldi%20along%20the%20the%20Amur%20River%2C%20north%20of%20Khabarovsk%20LCCN2004708127.jpg" alt="Нанайцы на берегу Амура севернее Хабаровска" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+            </div>
+            <div class="people-detail__text">
+                <p>Нанайцы — тунгусо-маньчжурский народ Дальнего Востока, живущий в бассейне Амура. Географические особенности региона — суровый климат, разнообразный ландшафт, обширные реки — напрямую влияли на образ жизни, мировоззрение и культурные традиции.</p>
+                <p>Охота и рыболовство — ключевые занятия. В текстах народов Сибири подробно описываются охотничьи хитрости, повадки зверей, ритуалы, связанные с добычей пищи. У коренных народов сложился анимистический взгляд на мир — вера в то, что природа одушевлена, а у каждого элемента есть свой дух.</p>
+                <p>Это находит прямое отражение в фольклоре: в сказках животные выступают как тотемные предки или помощники, а шаманские ритуалы тесно переплетены с культом природы. География не просто окружала народы, но и формировала их менталитет, мифологию и художественный язык.</p>
+                <p><strong>Одежда из рыбьей кожи.</strong> Традиционная нанайская одежда часто изготавливалась из кожи крупных рыб. Кожу высушивали, размягчали и сшивали — отсюда китайское название народа «юпи-дацзы» («люди с рыбьей кожей»).</p>
+                <p><strong>Кочевой уклад.</strong> Кочевой и полукочевой образ жизни был продиктован необходимостью следовать за сезонными изменениями природы, искать пастбища и места для охоты и рыболовства.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Стихотворение -->
+    <section class="section reveal">
+        <blockquote class="poem">
+            <div class="poem__text">
+                Саха-Сирэ — Якутская Земля!<br>
+                Кто вырос здесь, с волненьем произносит<br>
+                И с гордостью, простор её любя,<br>
+                Всем сердцем, если его спросят.<br>
+                Суровый край, сурова красота.<br>
+                И люди, здесь живущие, красивы.<br>
+                И пусть их жизнь порою не проста,<br>
+                Душой открыты, сердцем справедливы.
+            </div>
+            <cite class="poem__author">— С. Лопатин</cite>
+        </blockquote>
+    </section>
+
+    <!-- Географические особенности -->
+    <section class="section reveal">
+        <h2 class="section__title">Географические особенности</h2>
+        <div class="geography-block">
+            <div class="geography-image">
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Evenk.cerfs.jpg" alt="Природа Сибири — олени и тайга">
+            </div>
+            <div class="geography-text">
+                <p>Географические особенности Сибири и Якутии — суровый климат, разнообразный ландшафт (от тайги до тундры), обширные реки и озёра, горные массивы — напрямую влияли на образ жизни, мировоззрение и культурные традиции населяющих её народов.</p>
+                <p>Долгие зимы, короткое лето, необходимость кочевать вслед за оленями и сезонами охоты сформировали особый уклад. Природа здесь воспринимается не как фон, а как одушевлённый мир, с которым человек должен жить в согласии. Это влияние ярко отразилось в фольклоре и литературе.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section class="section reveal">
+        <h2 class="section__title">Галерея</h2>
+        <div class="costume-gallery">
+            <div class="costume-gallery__item">
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Evenk%20sprit%20tree.jpg" alt="Эвенкийское священное дерево">
+                <div class="costume-gallery__caption">Священное дерево эвенков</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Evenk.cerfs.jpg" alt="Олени в эвенкийском хозяйстве">
+                <div class="costume-gallery__caption">Олени — основа хозяйства</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Evenki%20bassinet.jpg" alt="Эвенкийская колыбель">
+                <div class="costume-gallery__caption">Эвенкийская колыбель</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://avatars.mds.yandex.net/i?id=e630938b20cfd3dd0cde4bc18b025122_l-10124655-images-thumbs&n=13" alt="Представитель эвенов Охотского округа">
+                <div class="costume-gallery__caption">Эвены Охотского округа</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/1875-1900%20Hezhe%20%28Nanai%29%20fishskin%20jacket%2001.jpg" alt="Традиционная нанайская куртка из рыбьей кожи">
+                <div class="costume-gallery__caption">Нанайская куртка из рыбьей кожи</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Goldes%20hunter%20on%20skis%20on%20ice%20floe%2C%20with%20spear%20and%20rifle%20LCCN2004707514.jpg" alt="Нанайский охотник на лыжах">
+                <div class="costume-gallery__caption">Нанайский охотник на льду Амура</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Традиционные костюмы -->
+    <section class="section reveal">
+        <h2 class="section__title">Традиционные костюмы</h2>
+        <div class="intro-text">
+            <p>Традиционный костюм народов Сибири отражает суровый климат и кочевой уклад: мех оленя, ровдуга, рыбьи кожи, геометрический орнамент и обережные узоры.</p>
+        </div>
+
+        <div class="costumes-grid">
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">01</div>
+                    <h3 class="costume-item__title">Эвенкийский кафтан</h3>
+                </div>
+                <p class="costume-item__text">Распашной кафтан из оленьего меха или ровдуги с нагрудником. Хорошо облегал фигуру и не стеснял движений при езде на олене и охоте. Сзади часто оставляли «хвост» из меха.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">02</div>
+                    <h3 class="costume-item__title">Эвенская одежда</h3>
+                </div>
+                <p class="costume-item__text">Двухслойный меховой кафтан (зимний — мехом внутрь и наружу), нагрудник, ноговицы, капорообразная шапка и торбаса. Украшался бисером и подшейным волосом оленя.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">03</div>
+                    <h3 class="costume-item__title">Нанайский халат</h3>
+                </div>
+                <p class="costume-item__text">Халат кимонообразного покроя из рыбьей кожи или ткани. Женский вариант длиннее и богато орнаментирован. Из рыбьей кожи шили также обувь и фартуки.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">04</div>
+                    <h3 class="costume-item__title">Орнамент</h3>
+                </div>
+                <p class="costume-item__text">Геометрические узоры, мотивы животных и природных явлений несли обережный и тотемный смысл. У эвенков часто встречается меховая мозаика, у нанайцев — орнамент, имитирующий чешую.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Творчество -->
+    <section class="section reveal">
+        <h2 class="section__title">Творчество</h2>
+        <div class="content-block">
+            <p>Фольклор народов Сибири неотделим от природы. В эвенкийских сказках часто встречаются сюжеты о сотворении мира, где важную роль играют образы Солнца, Луны и бессмертной души. Шаманские ритуалы тесно переплетены с культом природы.</p>
+            <p>Резко континентальный климат формировал особый склад характера — жизнестойкость, упорство, способность к преодолению трудностей. В литературе это проявляется через мотивы борьбы человека со стихией и поиска гармонии с суровой природой.</p>
+        </div>
+    </section>
+
+    <!-- Видео-материалы -->
+    <section class="section reveal">
+        <h2 class="section__title">Видео-материалы</h2>
+        <div class="videos-grid">
+            <a href="https://ya.ru/video/preview/16142610781700189728" target="_blank" class="video-card">
+                <div class="video-card__icon">▶</div>
+                <div class="video-card__content">
+                    <h3 class="video-card__title">Якутская сказка «Как Ветер к Великой Горе ходил»</h3>
+                    <span class="video-card__link">Смотреть видео</span>
+                </div>
+            </a>
+            <a href="https://ya.ru/video/preview/11332918179657567288" target="_blank" class="video-card">
+                <div class="video-card__icon">▶</div>
+                <div class="video-card__content">
+                    <h3 class="video-card__title">Сказку народов Севера читает Кормилицына О.А.</h3>
+                    <span class="video-card__link">Смотреть видео</span>
+                </div>
+            </a>
+        </div>
+    </section>
+</div>
+
+<script src="sibir.js"></script>
+</body>
+</html>

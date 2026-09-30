@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081120">
+  <meta name="description" content="Интерактивная викторина о народах и традициях регионов России.">
+  <title>Викторина о народах России</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="test.css">
+  <script src="test.js" defer></script>
+</head>
+<body class="quiz-page">
+  <div class="quiz-atmosphere" aria-hidden="true">
+    <span class="quiz-atmosphere__glow quiz-atmosphere__glow--blue"></span>
+    <span class="quiz-atmosphere__glow quiz-atmosphere__glow--teal"></span>
+    <span class="quiz-atmosphere__grid"></span>
+  </div>
+
+  <main class="quiz-shell">
+    <header class="quiz-topbar">
+      <a class="quiz-brand" href="../index.html" aria-label="На главную сайта">
+        <span class="quiz-brand__mark" aria-hidden="true"></span>
+        <span>СРвДН</span>
+      </a>
+      <a class="quiz-back-link" href="../index.html">
+        <span aria-hidden="true">←</span>
+        <span>К карте регионов</span>
+      </a>
+    </header>
+
+    <section class="quiz-intro" id="quizIntro" aria-labelledby="quizTitle">
+      <div class="quiz-intro__copy">
+        <p class="quiz-eyebrow"><span class="quiz-eyebrow__dot"></span>Интерактивная викторина</p>
+        <h1 class="quiz-intro__title" id="quizTitle">Россия<br><span>в деталях</span></h1>
+        <p class="quiz-intro__description">Проверьте, что запомнилось о народах, обычаях и природе семи регионов. Здесь важны не только знания, но и внимание к деталям.</p>
+        <button class="quiz-button quiz-button--primary quiz-start" id="startQuiz" type="button">
+          Начать викторину
+          <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+      <div class="quiz-intro__art" aria-hidden="true">
+        <div class="quiz-orbit quiz-orbit--outer"></div>
+        <div class="quiz-orbit quiz-orbit--inner"></div>
+        <div class="quiz-orbit__core"><span>35</span><small>вопросов</small></div>
+        <span class="quiz-orbit__point quiz-orbit__point--one"></span>
+        <span class="quiz-orbit__point quiz-orbit__point--two"></span>
+        <span class="quiz-orbit__point quiz-orbit__point--three"></span>
+        <span class="quiz-orbit__label quiz-orbit__label--north">СЕВЕР</span>
+        <span class="quiz-orbit__label quiz-orbit__label--east">ВОСТОК</span>
+        <span class="quiz-orbit__label quiz-orbit__label--south">УРАЛ</span>
+      </div>
+      <div class="quiz-intro__facts" aria-label="О викторине">
+        <div class="quiz-intro__fact"><strong>07</strong><span>регионов</span></div>
+        <div class="quiz-intro__fact"><strong>35</strong><span>вопросов</span></div>
+        <div class="quiz-intro__fact"><strong>02</strong><span>ответа в некоторых вопросах</span></div>
+      </div>
+    </section>
+
+    <section class="quiz-stage" id="quizStage" hidden aria-label="Прохождение викторины">
+      <div class="quiz-progress">
+        <div class="quiz-progress__top">
+          <div>
+            <p class="quiz-progress__eyebrow">Ваш маршрут</p>
+            <p class="quiz-progress__count"><span id="answeredCount">0</span><span class="quiz-progress__divider">/</span>35 <span class="quiz-progress__unit">отвечено</span></p>
+          </div>
+          <p class="quiz-progress__percent" id="progressPercent">0%</p>
+        </div>
+        <div class="quiz-progress__track" id="progressTrack" role="progressbar" aria-label="Прогресс отвеченных вопросов" aria-valuemin="0" aria-valuemax="35" aria-valuenow="0">
+          <span class="quiz-progress__fill" id="progressFill"></span>
+        </div>
+      </div>
+
+      <div class="quiz-layout">
+        <section class="quiz-question-card" aria-labelledby="questionTitle">
+          <div class="quiz-question-card__meta">
+            <span class="quiz-question-card__number"><span id="currentQuestionNumber">01</span><span>/ 35</span></span>
+            <span class="quiz-region-tag" id="questionSource"></span>
+          </div>
+          <p class="quiz-multiple-hint" id="multipleHint" hidden><span aria-hidden="true">＋</span> Выберите два варианта ответа</p>
+          <h2 class="quiz-question" id="questionTitle" tabindex="-1"></h2>
+          <div class="quiz-options" id="answerOptions" role="group" aria-labelledby="questionTitle"></div>
+          <p class="quiz-feedback" id="selectionFeedback" aria-live="polite"></p>
+          <div class="quiz-question-card__footer">
+            <button class="quiz-button quiz-button--quiet" id="previousQuestion" type="button">
+              <span aria-hidden="true">←</span> Назад
+            </button>
+            <button class="quiz-button quiz-button--primary" id="nextQuestion" type="button">
+              Следующий вопрос <span aria-hidden="true">→</span>
+            </button>
+            <button class="quiz-button quiz-button--primary quiz-submit" id="submitQuiz" type="button" hidden>
+              Проверить ответы <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </section>
+
+        <aside class="quiz-sidebar" aria-label="Навигация по вопросам">
+          <div class="quiz-sidebar__heading">
+            <div>
+              <p class="quiz-sidebar__eyebrow">Навигация</p>
+              <h2>Ваш маршрут</h2>
+            </div>
+            <span class="quiz-sidebar__map-icon" aria-hidden="true">⌁</span>
+          </div>
+          <p class="quiz-sidebar__note">Выберите номер, чтобы перейти к вопросу.</p>
+          <nav class="quiz-question-map" id="questionMap" aria-label="Номера вопросов"></nav>
+          <div class="quiz-map-legend">
+            <span><i class="quiz-map-legend__dot quiz-map-legend__dot--current"></i>Текущий</span>
+            <span><i class="quiz-map-legend__dot quiz-map-legend__dot--answered"></i>Отвечен</span>
+          </div>
+        </aside>
+      </div>
+      <p class="quiz-submit-note" id="submitNote" aria-live="polite"></p>
+    </section>
+
+    <section class="quiz-results" id="quizResults" hidden aria-labelledby="resultTitle">
+      <div class="quiz-results__hero">
+        <div class="quiz-results__copy">
+          <p class="quiz-eyebrow"><span class="quiz-eyebrow__dot quiz-eyebrow__dot--done"></span>Маршрут пройден</p>
+          <h2 class="quiz-results__title" id="resultTitle" tabindex="-1">Ваш результат</h2>
+          <p class="quiz-results__rank" id="resultRank"></p>
+          <p class="quiz-results__message" id="resultMessage"></p>
+        </div>
+        <div class="quiz-score-ring" id="scoreRing" role="img" aria-label="Результат: 0 из 35">
+          <div class="quiz-score-ring__inner">
+            <strong id="scoreValue">0</strong>
+            <span>из 35</span>
+          </div>
+        </div>
+        <div class="quiz-results__stats">
+          <div><strong id="scorePercent">0%</strong><span>точность</span></div>
+          <div><strong id="skippedCount">0</strong><span>без ответа</span></div>
+          <div><strong>07</strong><span>регионов пройдено</span></div>
+        </div>
+        <button class="quiz-button quiz-button--primary quiz-restart" id="restartQuiz" type="button">
+          Пройти тест заново <span aria-hidden="true">↻</span>
+        </button>
+      </div>
+
+      <section class="quiz-review" aria-labelledby="reviewTitle">
+        <div class="quiz-review__heading">
+          <div>
+            <p class="quiz-progress__eyebrow">Вопрос за вопросом</p>
+            <h2 id="reviewTitle">Разбор ответов</h2>
+          </div>
+          <p>Ваш выбор и верные варианты</p>
+        </div>
+        <div class="quiz-review__list" id="reviewList"></div>
+      </section>
+    </section>
+
+    <footer class="quiz-footer">
+      <span>Сила России — в дружбе народов</span>
+      <span>35 вопросов <i aria-hidden="true">·</i> 7 регионов</span>
+    </footer>
+  </main>
+  <noscript><p class="quiz-noscript">Для прохождения викторины необходимо включить JavaScript.</p></noscript>
+</body>
+</html>

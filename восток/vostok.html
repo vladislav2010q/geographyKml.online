@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Народы Дальнего Востока</title>
+    <link rel="stylesheet" href="vostok.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Unbounded:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Фоновые эффекты -->
+<div class="bg">
+    <div class="aurora aurora--1"></div>
+    <div class="aurora aurora--2"></div>
+    <div class="aurora aurora--3"></div>
+    <div class="grid-overlay"></div>
+    <div class="noise"></div>
+</div>
+<!-- Основной контент -->
+<div class="scene">
+    <!-- Заголовок -->
+    <header class="hero">
+        <div class="hero__head">
+            <h1 class="title">
+                <span class="title__row">Народы Дальнего Востока</span>
+            </h1>
+            <div class="hint">
+                <div class="hint__pulse"></div>
+                <span>Ительмены, нанайцы, нивхи</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Список народов с изображениями -->
+    <section class="section reveal" id="peoples">
+        <h2 class="section__title">Народы</h2>
+        <div class="peoples-grid">
+            <div class="people-card" data-target="itelmeny">
+                <div class="people-card__image">
+                    <img src="https://www.kamcnt.ru/upload/medialibrary/fbf/fbf3515dcfd03c8cf7f6166aba1fca75.jpg" 
+                         alt="Ительменский фольклорный ансамбль «Эльвель» в традиционной одежде" 
+                         loading="lazy" 
+                         style="width:100%;height:100%;object-fit:cover;">
+                </div>
+                <div class="people-card__icon">◆</div>
+                <h3 class="people-card__name">Ительмены</h3>
+                <p class="people-card__desc">Древний народ Камчатки</p>
+            </div>
+            <div class="people-card" data-target="nanay">
+                <div class="people-card__image">
+                    <img src="https://lib.omsk.ru/clk/clk/sites/default/files/25_4.jpg" 
+                         alt="Нанайский танцевальный ансамбль в костюмах с традиционным орнаментом" 
+                         loading="lazy" 
+                         style="width:100%;height:100%;object-fit:cover;">
+                </div>
+                <div class="people-card__icon">◆</div>
+                <h3 class="people-card__name">Нанайцы</h3>
+                <p class="people-card__desc">Народ Приамурья</p>
+            </div>
+            <div class="people-card" data-target="nivkhi">
+                <div class="people-card__image">
+                    <img src="https://cs15.pikabu.ru/post_img/2025/03/07/7/og_og_1741348595286178546.jpg" 
+                         alt="Нивхские участники культурного выступления в традиционной одежде с бубнами" 
+                         loading="lazy" 
+                         style="width:100%;height:100%;object-fit:cover;">
+                </div>
+                <div class="people-card__icon">◆</div>
+                <h3 class="people-card__name">Нивхи</h3>
+                <p class="people-card__desc">Хранители амурского языка</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Детальная информация об ительменах -->
+    <section class="people-detail reveal" id="itelmeny-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Ительмены</h2>
+            <button class="people-detail__close" onclick="closeDetail('itelmeny-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery">
+                <img src="https://mf.b37mrtl.ru/rbthmedia/images/2020.07/original/5f1845a615e9f922050dcbc1.jpg" 
+                     alt="Ительменки в традиционной одежде с меховой отделкой и бисерными повязками" 
+                     loading="lazy" 
+                     style="width:100%;height:260px;object-fit:cover;border-radius:12px;border:1px solid var(--border);">
+                <img src="https://uzan2.wordpress.com/wp-content/uploads/2015/09/d0b8d182d0b5d0bbd18cd0bcd0b5d0bdd18b.jpg" 
+                     alt="Ительменский танцевальный коллектив в традиционных костюмах" 
+                     loading="lazy" 
+                     style="width:100%;height:260px;object-fit:cover;border-radius:12px;border:1px solid var(--border);">
+                <img src="https://kam-kray.ru/upload/000/u10/e/0/proekt-itelmeny-aborigeny-kamchatki-predstavit-itelmenskii-ansambl-photo-big.jpg" 
+                     alt="Ительменский ансамбль «Эльвель» во время зимнего выступления" 
+                     loading="lazy" 
+                     style="width:100%;height:260px;object-fit:cover;border-radius:12px;border:1px solid var(--border);">
+            </div>
+            <div class="people-detail__text">
+                <p>Ительмены — древний народ Камчатки, один из коренных народов Дальнего Востока. Они кочуют по рекам и побережьям полуострова, традиционно занимаясь рыболовством, в том числе промыслом морских китов, а также охотой и собирательством. Природа полуострова — вулканы, тайга и океан — определяла весь хозяйственный уклад.</p>
+                <p>Традиционный костюм ительменов — это изделия из кожи и рыбьего меха, украшенные жемчугом и костью. Одежда была многослойной и тёплой, а обувь шилась так, чтобы не скользить по камням и льду. Мех, сухожилия и природные материалы использовались повсеместно.</p>
+                <p><strong>Ворон Кутх.</strong> Кутх — ворон, главное божество и прародитель в мифах ительменов. Он создал землю, наполнил её зверями и рыбами, дал людям законы и научил их охоте. В сказаниях он выступает как хозяин моря и покровитель промысла.</p>
+                <p><strong>Китовый промысел.</strong> Китовый промысел вели с берега и с лодок при помощи гарпунов и багорных копей. Кит считался священным животным, поэтому убийство его сопровождалось обрядами и строгими запретами: строй мясной пищи зависел от соблюдения всех правил.</p>
+                <p><strong>Сезонные стоянки.</strong> Ительмены вели полуоседлый образ жизни: весной и летом они поднимались по рекам к нерестилищам лосося, а осенью спускались к морю. Такой круговорот мест был частью мифологического осмысления пространства.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Детальная информация о нанайцах -->
+    <section class="people-detail reveal" id="nanay-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Нанайцы</h2>
+            <button class="people-detail__close" onclick="closeDetail('nanay-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery">
+                <img src="https://hkm.ru/wp-content/uploads/2021/12/6-kp-2409.-scaled.jpg" 
+                     alt="Женский нанайский халат из рыбьей кожи, Хабаровский краевой музей" 
+                     loading="lazy" 
+                     style="width:100%;height:260px;object-fit:contain;border-radius:12px;border:1px solid var(--border);">
+                <img src="https://life-on-earth.ru/images/Troitskoe-wedding-dress/25.jpg" 
+                     alt="Современная реконструкция традиционного нанайского свадебного халата «сикэ»" 
+                     loading="lazy" 
+                     style="width:100%;height:260px;object-fit:cover;border-radius:12px;border:1px solid var(--border);">
+                <img src="https://aif-s3.aif.ru/images/043/775/d6233a0f76a866499e5b408a66ab031a.webp" 
+                     alt="Нанайцы в традиционной одежде во время культурного мероприятия" 
+                     loading="lazy" 
+                     style="width:100%;height:260px;object-fit:cover;border-radius:12px;border:1px solid var(--border);">
+            </div>
+            <div class="people-detail__text">
+                <p>Нанайцы — крупный народ Приамурья, один из самых многочисленных коренных народов Дальнего Востока. Традиционные занятия — речное рыболовство, охота, а также художественная обработка кожи и дерева, которой нанайцы славились наравне с рыбаком.</p>
+                <p>Одежда нанайцев халатообразного покроя шилась из ткани и из рыбьей кожи, которую высушивали, размягчали и сшивали — отсюда китайское название народа «юпи-дацзи», то есть «люди с рыбьей кожей». Повседневная и праздничная одежда чётко различалась и указывала на статус.</p>
+                <p><strong>Амурское рыболовство.</strong> Речные промыслы на Амуре строились на ловушках, заездах и крючковых перехватах хода рыбы. Умение читать ход рыбы и течение определяло уклад жизни целых сёл, а рыба была основой питания, обрядов и календарных праздников.</p>
+                <p><strong>Одежда из рыбьей кожи.</strong> Кожу крупных рыб высушивали, размягчали и сшивали в одежду, обувь и фартуки. Такая одежда была лёгкой, не промокала и не стесняла движений — что особенно важно на лодке и на берегу.</p>
+                <p><strong>Одушевлённый мир.</strong> У коренных народов Дальнего Востока у воды, камней, деревьев и животных есть душа, а мир населён духами и божествами. Эти представления лежат в основе мифов, сказок и обрядов, которые записывали и включали в свои произведения писатели региона.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Детальная информация о нивхах -->
+    <section class="people-detail reveal" id="nivkhi-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Нивхи</h2>
+            <button class="people-detail__close" onclick="closeDetail('nivkhi-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery">
+                <img src="https://primamediamts.servicecdn.ru/f/big/725/724964.jpg" 
+                     alt="Нивхская участница праздника П’итул в традиционном костюме и с рыболовной сетью" 
+                     loading="lazy" 
+                     style="width:100%;height:260px;object-fit:cover;border-radius:12px;border:1px solid var(--border);">
+                <img src="https://atlaskmns.ru/files/nivhi/people_nivhi_modart_pic003.jpg" 
+                     alt="Современный нивхский сценический костюм с традиционным орнаментом" 
+                     loading="lazy" 
+                     style="width:100%;height:260px;object-fit:cover;border-radius:12px;border:1px solid var(--border);">
+                <img src="https://micrio.thingsthattalk.net/RCxrq/views/full/640x427.jpg" 
+                     alt="Нивхский халат из рыбьей кожи из музейной коллекции" 
+                     loading="lazy" 
+                     style="width:100%;height:260px;object-fit:contain;border-radius:12px;border:1px solid var(--border);">
+            </div>
+            <div class="people-detail__text">
+                <p>Нивхи — коренной народ Дальнего Востока, живущий в низовьях Амура и на Сахалине. Они занимаются рыболовством, охотой и собирательством, а также речным и морским промыслом. Нивхи сохранили уникальный изолированный язык, который не входит ни в одну из известных языковых семей.</p>
+                <p>Нивхский костюм сочетает зимние и летние варианты: тёплые куртки и штаны из кожи и меха летом, шубы и унты зимой. Одежду украшали вышивкой и орнаментом, а теплый стельки и подкладки делали из растительных материалов, впитывающих влагу.</p>
+                <p><strong>Нивхский язык.</strong> Нивхский язык — язык изолированной семьи, не имеющий родственников среди языков мира. На нём говорят всего несколько сотен человек, поэтому каждый, кто им владеет, — носитель уникального лингвистического знания.</p>
+                <p><strong>Рыболовство на Амуре.</strong> Главное занятие нивхов — рыболовство: ловля лосося на подъёме, ловля кеты и сазана в реке сетями, ловушками и заездами. С рыбой были связаны не только питание и заготовки, но и весь годовой хозяйственный цикл.</p>
+                <p><strong>Кит в нивхской мифологии.</strong> Кит у нивхов — священное животное, образ которого встроен в мифологию и промысловые обряды. Промысел китолова строго регламентировался поверьями и преданиями, а отношение к морю требовало осторожности и уважения.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Стихотворение -->
+    <section class="section reveal">
+        <blockquote class="poem">
+            <div class="poem__text">
+                Крутой обрыв родной земли, летящий косо к океану,<br>
+                От синевы твоей вдали тебя я помнить не устану.<br>
+                Продутый ветрами, сквозной, бегущий в небо по карнизам,<br>
+                Сияющей голубизной насквозь проникнут и пронизан,<br>
+                Свое величье утвердив, ты смотришь зорко и далеко,<br>
+                Родной земли крутой обрыв, крутой уступ Владивостока.
+            </div>
+            <cite class="poem__author">— М. Алигер</cite>
+        </blockquote>
+    </section>
+
+    <!-- Географические особенности с изображением -->
+    <section class="section reveal">
+        <h2 class="section__title">Географические особенности</h2>
+        <div class="geography-block">
+            <div class="geography-image">
+                <img src="https://imcdn.bolshayastrana.com/940x00/ea19bbc7d3e7dc4cc103ae03ee6e52a18eabad9b0f185bb2f24d57d3295bab6c.jpeg" 
+                     alt="Вулканический пейзаж Камчатки с заснеженной вершиной" 
+                     loading="lazy" 
+                     style="width:100%;height:auto;display:block;object-fit:cover;border-radius:20px;">
+            </div>
+            <div class="geography-text">
+                <p>Дальний Восток — самый восточный регион России, занимающий около 41 % её территории и протянувшийся почти на 4,5 тыс. км с северо-востока на юго-запад. Он омывается Тихим океаном и его морями — Беринговым, Охотским, Японским, — а рельеф здесь в основном горный.</p>
+                <p>Суровый климат, сложная рельефная структура — горы, тайга, тундра, побережья — обилие рек, морей и лесов напрямую влияли на хозяйственный уклад и мировоззрение коренных народов. Высшая точка региона — действующий вулкан Ключевская Сопка (4750 м) на Камчатке, а среди горных систем выделяются Сихотэ-Алинь, Джугджур и Колымское нагорье.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея традиционных костюмов -->
+    <section class="section reveal">
+        <h2 class="section__title">Галерея традиционных костюмов</h2>
+        <div class="costume-gallery">
+            <div class="costume-gallery__item">
+                <img src="https://atlaskmns.ru/gal/itelmeny/itelmeny_medialibrary_pic010.jpg" 
+                     alt="Ительменская семья в традиционной меховой одежде и украшениях" 
+                     loading="lazy" 
+                     style="width:100%;height:280px;object-fit:cover;display:block;">
+                <div class="costume-gallery__caption">Ительменская семья в традиционной одежде</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://almode.club/uploads/posts/2021-03/1615881746_2-p-natsionalnaya-odezhda-nanaitsev-2.jpg" 
+                     alt="Нанайский халат с яркой многоцветной вышивкой на музейном манекене" 
+                     loading="lazy" 
+                     style="width:100%;height:280px;object-fit:contain;display:block;">
+                <div class="costume-gallery__caption">Нанайский халат с вышивкой</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4ASk-e8doJ0I_qecmHNOFlnIPUA_R4T46DPu1Ysvh7w&s" 
+                     alt="Ительменский праздник Алхалалалай: участники в традиционных костюмах" 
+                     loading="lazy" 
+                     style="width:100%;height:280px;object-fit:cover;display:block;">
+                <div class="costume-gallery__caption">Ительменский праздник Алхалалалай</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://cs3.livemaster.ru/zhurnalfoto/f/2/c/140528170241.jpg" 
+                     alt="Нанайский праздничный халат с аппликацией и орнаментом" 
+                     loading="lazy" 
+                     style="width:100%;height:280px;object-fit:contain;display:block;">
+                <div class="costume-gallery__caption">Нанайский праздничный халат с орнаментом</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://atlaskmns.ru/gal/itelmeny/itelmeny_medialibrary_pic006.jpg" 
+                     alt="Ительменские женщины в традиционной одежде на фоне побережья" 
+                     loading="lazy" 
+                     style="width:100%;height:280px;object-fit:cover;display:block;">
+                <div class="costume-gallery__caption">Ительменки в традиционной одежде на побережье</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Традиционные костюмы -->
+    <section class="section reveal">
+        <h2 class="section__title">Традиционные костюмы</h2>
+        <div class="intro-text">
+            <p>Традиционный костюм коренных народов Дальнего Востока — это уникальный сплав практичности и искусства. Одежда региона чётко делится на две большие группы в зависимости от климата и ключевых промыслов: таежно-речную (нанайцы, ульчи, нивхи, удэгейцы) и тундрово-арктическую (чукчи, коряки). Обувь шилась с учётом рельефа и сезона, всегда обеспечивая свободу движений.</p>
+        </div>
+
+        <div class="costumes-grid">
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">01</div>
+                    <h3 class="costume-item__title">Основа костюма</h3>
+                </div>
+                <p class="costume-item__text">У таежно-речных народов основой служил халат из ткани или из кожи крупных рыб, у тундрово-арктических — многослойный меховой комплект из оленьих шкур, рассчитанный на мороз и ветер.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">02</div>
+                    <h3 class="costume-item__title">Мех и укрытия</h3>
+                </div>
+                <p class="costume-item__text">Мех оленя, нерпы и морского зайца служил основой утепления: из него шили куртки, капюшоны, шубы, а из подстриженного камуса — сапоги. Число слоёв зависело от климата и сезона промысла.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">03</div>
+                    <h3 class="costume-item__title">Торбаса и унты</h3>
+                </div>
+                <p class="costume-item__text">Сапоги из камуса (жёсткого меха с ног оленя) с подошвой из подстриженной шкуры лахтака (морского зайца), которая не скользила по льду. Такая обувь была обязательной частью костюма оленеводца и рыбака.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">04</div>
+                    <h3 class="costume-item__title">Олочи</h3>
+                </div>
+                <p class="costume-item__text">Лёгкие поршни из кожи рыбы или нерпы у амурских народов. Внутрь обуви вместо носков всегда клали стельки из сушёной осоки, которая впитывала влагу и отлично удерживала тепло.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">05</div>
+                    <h3 class="costume-item__title">Орнамент и украшения</h3>
+                </div>
+                <p class="costume-item__text">Одежду украшали вышивкой, орнаментом, а также жемчугом, костью и зубами морского зверя. Эти детали были не только красой, но и оберегом, а также указанием на статус владельца костюма.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Творчество -->
+    <section class="section reveal">
+        <h2 class="section__title">Творчество</h2>
+        <div class="content-block">
+            <p>Суровый климат, охота, рыболовство, обработка природных материалов, мифология и кочевой образ жизни — всё это ярко прослеживается в литературе Дальнего Востока, где природа становится не просто фоном, а полноценным участником повествования, формирующим быт, мифологию и ценности. Авторы записывают мифы и легенды, описывают способы охоты на морского зверя и рыбной ловли, а сюжеты о долгих кочевьях и встречах с соседними народами отражают подвижный образ жизни.</p>
+        </div>
+    </section>
+
+    <!-- Видео-материалы -->
+    <section class="section reveal">
+        <h2 class="section__title">Видео-материалы</h2>
+        <div class="videos-grid">
+            <a href="https://ya.ru/video/preview/7779998966080071512" target="_blank" class="video-card">
+                <div class="video-card__icon">▶</div>
+                <div class="video-card__content">
+                    <h3 class="video-card__title">Нанайская сказка «Айога»</h3>
+                    <span class="video-card__link">Смотреть видео</span>
+                </div>
+            </a>
+
+            <a href="https://ya.ru/video/preview/9102477902207820629" target="_blank" class="video-card">
+                <div class="video-card__icon">▶</div>
+                <div class="video-card__content">
+                    <h3 class="video-card__title">Добрая деревня. Чукотская сказка</h3>
+                    <span class="video-card__link">Смотреть видео</span>
+                </div>
+            </a>
+        </div>
+    </section>
+</div>
+
+<script src="vostok.js"></script>
+
+</body>
+</html>

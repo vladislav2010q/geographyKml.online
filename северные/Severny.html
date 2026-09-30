@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Народы Европейского Севера</title>
+    <link rel="stylesheet" href="Severny.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Unbounded:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Фоновые эффекты -->
+<div class="bg">
+    <div class="aurora aurora--1"></div>
+    <div class="aurora aurora--2"></div>
+    <div class="aurora aurora--3"></div>
+    <div class="grid-overlay"></div>
+    <div class="noise"></div>
+</div>
+<!-- Основной контент -->
+<div class="scene">
+    <!-- Заголовок -->
+    <header class="hero">
+        <div class="hero__head">
+            <h1 class="title">
+                <span class="title__row">Народы Европейского Севера</span>
+            </h1>
+            <div class="hint">
+                <div class="hint__pulse"></div>
+                <span>Культура и традиции народов Русского Севера</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Список народов с изображениями -->
+    <section class="section reveal" id="peoples">
+        <h2 class="section__title">Народы</h2>
+        <div class="peoples-grid">
+            <div class="people-card" data-target="saami">
+                <div class="people-card__image">
+                    <img src="https://image.qwenlm.ai/public_source/f3ce5440-d97e-451f-9fec-87b36c118151/10de6d86a-d850-40cf-9ae5-cea80099d9495089.png" alt="Саамы">
+                </div>
+                <div class="people-card__icon">◆</div>
+                <h3 class="people-card__name">Саами</h3>
+                <p class="people-card__desc">Коренной народ Севера</p>
+            </div>
+            <div class="people-card" data-target="karelians">
+                <div class="people-card__image">
+                    <img src="https://image.qwenlm.ai/public_source/f3ce5440-d97e-451f-9fec-87b36c118151/50de6d86a-d850-40cf-9ae5-cea80099d9491009.png" alt="Карелы">
+                </div>
+                <div class="people-card__icon">◆</div>
+                <h3 class="people-card__name">Карелы</h3>
+                <p class="people-card__desc">Творцы Калевалы</p>
+            </div>
+            <div class="people-card" data-target="komi">
+                <div class="people-card__image">
+                    <img src="https://image.qwenlm.ai/public_source/f3ce5440-d97e-451f-9fec-87b36c118151/30de6d86a-d850-40cf-9ae5-cea80099d9494384.png" alt="Коми">
+                </div>
+                <div class="people-card__icon">◆</div>
+                <h3 class="people-card__name">Коми</h3>
+                <p class="people-card__desc">Хранители традиций</p>
+            </div>
+            <div class="people-card" data-target="pomors">
+                <div class="people-card__image">
+                    <img src="https://goarctic.ru/upload/iblock/694/6943f08f70194e3e39d094f2de9c00d9.jpg" alt="Поморы">
+                </div>
+                <div class="people-card__icon">◆</div>
+                <h3 class="people-card__name">Поморы</h3>
+                <p class="people-card__desc">Покорители морей</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Детальная информация о саамах -->
+    <section class="people-detail reveal" id="saami-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Саами</h2>
+            <button class="people-detail__close" onclick="closeDetail('saami-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://i.pinimg.com/originals/f3/c2/c5/f3c2c5eaa82b2d17f2fccd136e115560.jpg" alt="Саамский костюм" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://avatars.mds.yandex.net/i?id=500c5004f8cdceef76b2c22bea616625_l-4024741-images-thumbs&n=13" alt="Саамы праздник" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://i.ytimg.com/vi/7O934gOSFhw/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBQgKih_MA8=&amp;rs=AOn4CLBaS69_CYV6yb-CKci05mSm5KodIw" alt="Саамы история" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+            </div>
+            <div class="people-detail__text">
+                <p>Саами — коренной народ Европейского Севера, традиционно занимающийся оленеводством, рыболовством и охотой. Их культура тесно связана с суровой природой Заполярья.</p>
+                <p>Традиционный костюм саамов отличается яркими цветами и характерными узорами. Особое значение имеют головные уборы и украшения из серебра.</p>
+                <p><strong>Почитание сейдов.</strong> Сейды — священные камни и утёсы, где, по верованиям саамов, обитают духи-хозяева природы и промыслов. К ним приходили перед охотой или рыбалкой, оставляли подношения (кости оленя, рыбий жир), просили удачи. Этот обычай связывал человека с местом и напоминал о бережном отношении к тундре.</p>
+                <p><strong>Йойк.</strong> Йойк — особый способ пения без привычных слов: мелодия «рисует» человека, оленя, озеро или событие. Йойк исполняют в повседневной жизни и на праздниках, передают из поколения в поколение. Для саамов это живая память о роде и природе, а не просто песня.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Детальная информация о карелах -->
+    <section class="people-detail reveal" id="karelians-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Карелы</h2>
+            <button class="people-detail__close" onclick="closeDetail('karelians-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://avatars.mds.yandex.net/i?id=9b2c75c65a88386343652df982044f6b_l-5228659-images-thumbs&n=13" alt="Карельский костюм" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://image.qwenlm.ai/public_source/f3ce5440-d97e-451f-9fec-87b36c118151/50de6d86a-d850-40cf-9ae5-cea80099d9491009.png" alt="Карелы девушки" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://image.qwenlm.ai/public_source/f3ce5440-d97e-451f-9fec-87b36c118151/40de6d86a-d850-40cf-9ae5-cea80099d9496345.png" alt="Карелия деревня" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+            </div>
+            <div class="people-detail__text">
+                <p>Карелы — финно-угорский народ, создатели знаменитого эпоса «Калевала». Традиционно проживают в Республике Карелия и соседних регионах.</p>
+                <p>Карельский костюм характеризуется туникообразным покроем рубах, богатой вышивкой и яркими полосатыми юбками. Орнаменты несли обережную функцию.</p>
+                <p><strong>Исполнение рун.</strong> Карелы издавна пели эпические руны — протяжные песни о героях, творении мира и повседневной жизни. Именно из таких рун Элиас Лённрот собрал «Калевалу». Руны исполняли на посиделках, работах и праздниках: так сохраняли историю рода и учили молодых.</p>
+                <p><strong>Лемби.</strong> Лемби — «славутность», особая притягательность девушки или юноши. Чтобы «поднять лемби», устраивали обряды (часто в бане): верили, что это помогает найти пару на бесёдах и игрищах. Обычай был важен для создания семьи и продолжения рода в деревенской общине.</p>
+                <p><strong>Юханнус (Иванов день).</strong> В день летнего солнцестояния карелы разжигали костры, водили хороводы и пели. Праздник связывали с расцветом природы и удачей на год. Вместе с осенним Кекри (благодарность за урожай) он отмечал главные точки хозяйственного цикла и укреплял общину.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Детальная информация о коми -->
+    <section class="people-detail reveal" id="komi-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Коми</h2>
+            <button class="people-detail__close" onclick="closeDetail('komi-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://народы74.рф/assets/manager/%D0%9A%D0%BE%CC%81%D0%BC%D0%B8-%D0%BF%D0%B5%D1%80%D0%BC%D1%8F%D0%BA%D0%B8%CC%81/naczionalnaya-odezhda-komi-permyakov.jpg" alt="Коми костюм" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://image.qwenlm.ai/public_source/f3ce5440-d97e-451f-9fec-87b36c118151/50de6d86a-d850-40cf-9ae5-cea80099d9492194.png" alt="Коми праздник" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://s15.stc.yc.kpcdn.net/share/i/12/10525346/wr-960.webp" alt="Коми орнаменты" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+            </div>
+            <div class="people-detail__text">
+                <p>Коми (зыряне) — финно-угорский народ, проживающий в Республике Коми. Традиционные занятия — оленеводство, охота, рыболовство.</p>
+                <p>Костюм коми отличается многослойностью, богатыми орнаментами с геометрическими и зооморфными мотивами. Характерны высокие головные уборы и обилие украшений.</p>
+                <p><strong>Чарла рок (каша серпа).</strong> Осенний праздник урожая: варили кашу, благодарили землю и духов за хлеб. Устраивали после окончания полевых работ. Обычай напоминал, что достаток зависит не только от труда, но и от уважения к природе и предкам.</p>
+                <p><strong>Видзысь на свадьбе.</strong> На свадьбе у коми часто присутствовал видзысь — «смотритель», человек, который вёл обряд и оберегал молодых от дурного глаза. Свадьба длилась несколько дней: сватовство, рукобитье, баня невесты, венчание и пиры в обоих домах. Так защищали новую семью и связывали два рода.</p>
+                <p><strong>«Продажа» больного ребёнка.</strong> Если ребёнок часто болел, мать могла «продать» его крестной через окно за монету, а потом занести обратно через дверь. Верили, что так меняется «доля» и уходит хворь. Обычай отражал заботу о детях и веру в силу символических действий.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Детальная информация о поморах -->
+    <section class="people-detail reveal" id="pomors-section">
+        <div class="people-detail__header">
+            <h2 class="people-detail__title">Поморы</h2>
+            <button class="people-detail__close" onclick="closeDetail('pomors-section')">×</button>
+        </div>
+        <div class="people-detail__content" style="display:flex;flex-direction:column;gap:32px;">
+            <div class="people-detail__gallery" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;">
+                <img src="https://dvinatoday.ru/upload/iblock/77a/uZK2bBdvmOs.jpg" alt="Поморье" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://foto-tula.ru/files/p0128344.jpg" alt="Поморы север" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+                <img src="https://corac.co/wp-content/uploads/2023/09/post757.jpg" alt="Поморское побережье" style="width:100%;height:260px;object-fit:cover;border-radius:16px;border:1px solid var(--border);">
+            </div>
+            <div class="people-detail__text">
+                <p>Поморы — русское население побережья Белого и Баренцева морей. Традиционные занятия — морские промыслы, рыболовство, охота на морского зверя.</p>
+                <p>Поморы создали уникальную культуру мореходов и первопроходцев. Их костюм близок к русскому северному, но с особенностями, обусловленными морским промыслом.</p>
+                <p><strong>Обетные кресты.</strong> После удачного промысла, спасения в бурю или исполнения обета поморы ставили деревянные кресты на берегу. Кресты ставили и «на добычу» — чтобы рыба лучше ловилась. Это был способ поблагодарить море и Николая Угодника, покровителя мореходов.</p>
+                <p><strong>Чистота моря и реки.</strong> Поморы строго следили, чтобы в море и реку не бросали мусор. Считалось, что загрязнение воды обижает хозяев вод и грозит бедой на промысле. Обычай сохранял кормильца-море и учил ответственности перед общей стихией.</p>
+                <p><strong>Молить ветер и спуск судна.</strong> Перед выходом в море и при ледоходе совершали обряды: «молили ветер», провожали лёд, отмечали спуск судна на воду (водоноска, ледоноска). Женщины иногда исполняли особые заклички, прося попутного ветра для мурманщиков. Так связывали удачу с уважением к стихиям и общинной поддержкой.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Стихотворение -->
+    <section class="section reveal">
+        <blockquote class="poem">
+            <div class="poem__text">
+                Я себя Заполярьем проверил<br>
+                И сроднился с ним сердцем, душой,<br>
+                Сколько нас, кому стал Русский север,<br>
+                Песней, жизнью, любовью, судьбой.
+            </div>
+            <cite class="poem__author">— Л. Н. Новосёлов</cite>
+        </blockquote>
+    </section>
+
+    <!-- Географические особенности с изображением -->
+    <section class="section reveal">
+        <h2 class="section__title">Географические особенности</h2>
+        <div class="geography-block">
+            <div class="geography-image">
+                <img src="https://image.qwenlm.ai/public_source/f3ce5440-d97e-451f-9fec-87b36c118151/20de6d86a-d850-40cf-9ae5-cea80099d9495876.png" alt="Природа Севера">
+            </div>
+            <div class="geography-text">
+                <p>Географические особенности Европейского Севера и Карелии — суровый климат, обширные леса, озёра, скалы, близость морей — напрямую повлияли на быт, мировосприятие и культуру местных народов.</p>
+                <p>Долгие зимы с полярной ночью, короткое прохладное лето, обилие лесов и водоёмов сформировали особый уклад жизни. Природа здесь воспринимается не как фон, а как живой, порой магический собеседник.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея традиционных костюмов -->
+    <section class="section reveal">
+        <h2 class="section__title">Галерея традиционных костюмов</h2>
+        <div class="costume-gallery">
+            <div class="costume-gallery__item">
+                <img src="https://image.qwenlm.ai/public_source/f3ce5440-d97e-451f-9fec-87b36c118151/40de6d86a-d850-40cf-9ae5-cea80099d9498227.png" alt="Традиционный костюм">
+                <div class="costume-gallery__caption">Традиционные наряды народов Севера</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://image.qwenlm.ai/public_source/f3ce5440-d97e-451f-9fec-87b36c118151/60de6d86a-d850-40cf-9ae5-cea80099d9498229.png" alt="Карельский эскиз">
+                <div class="costume-gallery__caption">Эскизы карельских костюмов</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://image.qwenlm.ai/public_source/f3ce5440-d97e-451f-9fec-87b36c118151/10de6d86a-d850-40cf-9ae5-cea80099d9499720.png" alt="Коми праздник">
+                <div class="costume-gallery__caption">Праздник народа коми</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://image.qwenlm.ai/public_source/f3ce5440-d97e-451f-9fec-87b36c118151/30de6d86a-d850-40cf-9ae5-cea80099d9494503.png" alt="Коми дети">
+                <div class="costume-gallery__caption">Традиционная одежда коми</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPqs_f56DSM3JAF2x5H-nfEnCYwxmKkJu0H9lmMMNILkafOtANjMEARDk&s=10" alt="Финно-угорские народы">
+                <div class="costume-gallery__caption">Финно-угорские народы</div>
+            </div>
+            <div class="costume-gallery__item">
+                <img src="https://image.qwenlm.ai/public_source/f3ce5440-d97e-451f-9fec-87b36c118151/20de6d86a-d850-40cf-9ae5-cea80099d9499954.png" alt="Коми танец">
+                <div class="costume-gallery__caption">Народные танцы</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Традиционные костюмы -->
+    <section class="section reveal">
+        <h2 class="section__title">Традиционные костюмы</h2>
+        <div class="intro-text">
+            <p>Традиционные костюмы финно-угорских народов — это не просто одежда, а сложный комплекс, отражающий мировоззрение, хозяйственный уклад, территориальную принадлежность и родовые традиции.</p>
+        </div>
+
+        <div class="costumes-grid">
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">01</div>
+                    <h3 class="costume-item__title">Основа костюма</h3>
+                </div>
+                <p class="costume-item__text">У большинства народов основой служила туникообразная рубаха из домотканого льна или конопляного холста.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">02</div>
+                    <h3 class="costume-item__title">Вышивка и декор</h3>
+                </div>
+                <p class="costume-item__text">Орнаменты (геометрические, зооморфные, растительные) и цветовые решения несли сакральный смысл, связанный с защитой, плодородием, связью с предками и природными силами. Вышивка часто располагалась на груди, рукавах, подоле, по вороту, подолу и краям одежды. Использовались шёлк, шерсть, растительные и минеральные краски.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">03</div>
+                    <h3 class="costume-item__title">Пояс</h3>
+                </div>
+                <p class="costume-item__text">Важный элемент костюма, который делил фигуру на верхнюю (связанную с верхним миром) и нижнюю (связанную с земным миром) части.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">04</div>
+                    <h3 class="costume-item__title">Головные уборы</h3>
+                </div>
+                <p class="costume-item__text">У женщин они были особенно разнообразны и служили маркером возраста, семейного положения и этнической принадлежности. Например, у эрзи (субэтнос мордвы) носили высокие уборы на твёрдой основе (панго, сорока, шлыган) конической или прямоугольной формы, а у мокши — трапециевидные чепцы.</p>
+            </div>
+
+            <div class="costume-item">
+                <div class="costume-item__header">
+                    <div class="costume-item__number">05</div>
+                    <h3 class="costume-item__title">Украшения</h3>
+                </div>
+                <p class="costume-item__text">Обилие шейно-нагрудных украшений (монеты, бисер, металлические подвески, ракушки каури) было характерной чертой.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Творчество -->
+    <section class="section reveal">
+        <h2 class="section__title">Творчество</h2>
+        <div class="content-block">
+            <p>Творчество народов Русского Севера отражает географические особенности, традиции и культуру народов: песни, сказки, эпос.</p>
+        </div>
+    </section>
+
+    <!-- Видео-материалы -->
+    <section class="section reveal">
+        <h2 class="section__title">Видео-материалы</h2>
+        <div class="videos-grid">
+            <a href="https://ya.ru/video/preview/5656812293565289847" target="_blank" class="video-card">
+                <div class="video-card__icon">▶</div>
+                <div class="video-card__content">
+                    <h3 class="video-card__title">"Морженые песни" Степан Писахов</h3>
+                    <span class="video-card__link">Смотреть видео</span>
+                </div>
+            </a>
+
+            <a href="https://ya.ru/video/preview/643127445054558326" target="_blank" class="video-card">
+                <div class="video-card__icon">▶</div>
+                <div class="video-card__content">
+                    <h3 class="video-card__title">Мультфильм</h3>
+                    <span class="video-card__link">Смотреть видео</span>
+                </div>
+            </a>
+
+            <a href="https://ya.ru/video/preview/749636576028584705" target="_blank" class="video-card">
+                <div class="video-card__icon">▶</div>
+                <div class="video-card__content">
+                    <h3 class="video-card__title">Калевала: карело-финский эпос</h3>
+                    <span class="video-card__link">Смотреть видео</span>
+                </div>
+            </a>
+
+            <a href="https://ya.ru/video/preview/13655992457350577066" target="_blank" class="video-card">
+                <div class="video-card__icon">▶</div>
+                <div class="video-card__content">
+                    <h3 class="video-card__title">Калевала. Краткое содержание</h3>
+                    <span class="video-card__link">Смотреть видео</span>
+                </div>
+            </a>
+        </div>
+    </section>
+</div>
+
+<script src="Severny.js"></script>
+
+</body>
+</html>
