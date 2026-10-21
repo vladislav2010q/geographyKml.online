@@ -116,55 +116,83 @@ function initializeMap() {
 
   let touchPrimedRegion = null;
   let lastPointerType = null;
+  let activeRegionId = null;
+  let tooltipFrame = 0;
+  let pendingTooltipPosition = null;
+  const narrowViewport = window.matchMedia('(max-width: 700px)');
 
   function positionTooltip(clientX, clientY) {
-    const bounds = mapWrap.getBoundingClientRect();
-    const isNarrow = window.matchMedia('(max-width: 700px)').matches;
-    tooltip.hidden = false;
-    tooltip.classList.add('show');
+    pendingTooltipPosition = { clientX, clientY };
+    if (tooltipFrame) return;
 
-    if (isNarrow) {
-      tooltip.style.left = '';
-      tooltip.style.top = '';
-      return;
-    }
+    tooltipFrame = requestAnimationFrame(() => {
+      tooltipFrame = 0;
+      const pointer = pendingTooltipPosition;
+      pendingTooltipPosition = null;
+      if (!pointer || tooltip.hidden) return;
 
-    const tooltipWidth = tooltip.offsetWidth;
-    const tooltipHeight = tooltip.offsetHeight;
-    const pointerX = Number.isFinite(clientX) ? clientX - bounds.left : bounds.width * 0.67;
-    const pointerY = Number.isFinite(clientY) ? clientY - bounds.top : bounds.height * 0.48;
-    const left = Math.max(14, Math.min(pointerX + 16, bounds.width - tooltipWidth - 14));
-    const top = pointerY + tooltipHeight + 18 > bounds.height
-      ? Math.max(14, pointerY - tooltipHeight - 16)
-      : Math.max(14, pointerY + 16);
+      if (narrowViewport.matches) {
+        tooltip.style.left = '';
+        tooltip.style.top = '';
+        return;
+      }
 
-    tooltip.style.left = `${left}px`;
-    tooltip.style.top = `${top}px`;
+      const bounds = mapWrap.getBoundingClientRect();
+      const tooltipWidth = tooltip.offsetWidth;
+      const tooltipHeight = tooltip.offsetHeight;
+      const pointerX = Number.isFinite(pointer.clientX) ? pointer.clientX - bounds.left : bounds.width * 0.67;
+      const pointerY = Number.isFinite(pointer.clientY) ? pointer.clientY - bounds.top : bounds.height * 0.48;
+      const left = Math.max(14, Math.min(pointerX + 16, bounds.width - tooltipWidth - 14));
+      const top = pointerY + tooltipHeight + 18 > bounds.height
+        ? Math.max(14, pointerY - tooltipHeight - 16)
+        : Math.max(14, pointerY + 16);
+
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${top}px`;
+    });
   }
 
   function activateRegion(regionId, clientX, clientY) {
     const region = regions[regionId];
     if (!region) return;
 
-    mapWrap.classList.add('is-interacting');
-    linksByRegion.forEach((links, id) => {
-      links.forEach(link => link.classList.toggle('is-active', id === regionId));
-    });
-    listTriggers.forEach(trigger => {
-      trigger.classList.toggle('is-active', trigger.dataset.regionTrigger === regionId);
-    });
-    tooltipTitle.textContent = region.label;
-    tooltipDescription.textContent = region.description;
-    tooltipLink.href = region.href;
-    tooltip.dataset.regionId = regionId;
-    tooltip.style.setProperty('--region-color', region.color);
+    if (activeRegionId !== regionId) {
+      if (activeRegionId) {
+        linksByRegion.get(activeRegionId).forEach(link => link.classList.remove('is-active'));
+      }
+      linksByRegion.get(regionId).forEach(link => link.classList.add('is-active'));
+      listTriggers.forEach(trigger => {
+        trigger.classList.toggle('is-active', trigger.dataset.regionTrigger === regionId);
+      });
+      activeRegionId = regionId;
+      mapWrap.classList.add('is-interacting');
+
+      tooltipTitle.textContent = region.label;
+      tooltipDescription.textContent = region.description;
+      tooltipLink.href = region.href;
+      tooltip.dataset.regionId = regionId;
+      tooltip.style.setProperty('--region-color', region.color);
+    }
+
+    tooltip.hidden = false;
+    tooltip.classList.add('show');
     positionTooltip(clientX, clientY);
   }
 
   function clearRegion() {
+    if (tooltipFrame) {
+      cancelAnimationFrame(tooltipFrame);
+      tooltipFrame = 0;
+    }
+    pendingTooltipPosition = null;
+
+    if (activeRegionId) {
+      linksByRegion.get(activeRegionId).forEach(link => link.classList.remove('is-active'));
+      listTriggers.forEach(trigger => trigger.classList.remove('is-active'));
+      activeRegionId = null;
+    }
+
     mapWrap.classList.remove('is-interacting');
-    mapWrap.querySelectorAll('.map-region-link.is-active').forEach(link => link.classList.remove('is-active'));
-    listTriggers.forEach(trigger => trigger.classList.remove('is-active'));
     tooltip.classList.remove('show');
     tooltip.hidden = true;
     tooltip.style.left = '';
